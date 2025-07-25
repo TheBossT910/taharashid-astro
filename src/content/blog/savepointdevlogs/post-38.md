@@ -9,7 +9,7 @@ date: 2025-7-19
 - I changed up the theme a little bit and updated the main product card (see video)
 
 <video width="100%" controls>
-  <source src="/blog/savepointdevlogs/post-38/19:07:2025 Theme Updates.mov" type="video/mp4">
+  <source src="/blog/savepointdevlogs/post-38/site-theme.mov" type="video/mp4">
 </video>
 
 <img src="/blog/savepointdevlogs/post-38/figma-components.png" alt="figma components" style="max-height: 800px; width: auto">

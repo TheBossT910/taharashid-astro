@@ -10,5 +10,5 @@ date: 2025-7-5
 - Still need to add Retailers sections (make a card + overflow-y for that)
 
 <video width="100%" controls>
-  <source src="/blog/savepointdevlogs/post-32/Details View.mov" type="video/mp4">
+  <source src="/blog/savepointdevlogs/post-32/details.mov" type="video/mp4">
 </video>

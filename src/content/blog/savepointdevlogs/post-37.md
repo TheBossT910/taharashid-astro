@@ -14,7 +14,7 @@ date: 2025-7-18
 - Looks pretty nice at the moment. Also created a theme for the site (see video, it was actually at July 19 since I stayed up late)
 
 <video width="100%" controls>
-  <source src="/blog/savepointdevlogs/post-37/19:07:2025 Figma Site Theming (OLDER).mov" type="video/mp4">
+  <source src="/blog/savepointdevlogs/post-37/site-theme.mov" type="video/mp4">
 </video>
 
 <img src="/blog/savepointdevlogs/post-37/details.png" alt="details top" style="max-height: 800px; width: auto">
