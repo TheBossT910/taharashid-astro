@@ -57,6 +57,8 @@ export default defineConfig({
     'i-simple-icons-unity',
     'i-simple-icons-anki',
     'i-ri-t-shirt-2-fill',
+    'i-ri-linkedin-fill',
+    'i-ri-instagram-line',
 
   ],
 })

@@ -19,11 +19,13 @@ export const siteConfig = {
       text: 'Linkedin',
       href: 'https://www.linkedin.com/in/taha-rashid192/',
       icon: 'i-simple-icons-linkedin',
+      header: 'i-ri-linkedin-fill',
     },
     {
       text: 'Instagram',
       href: 'https://www.instagram.com/thebosst710192/',
       icon: 'i-simple-icons-instagram',
+      header: 'i-ri-instagram-line',
     },
   ],
   header: {
