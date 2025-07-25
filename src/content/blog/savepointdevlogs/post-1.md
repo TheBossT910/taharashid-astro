@@ -6,4 +6,4 @@ date: 2024-11-9
 
 *SavePoint*
 
-- This is a test devlog
+- SavePoint Devlogs coming soon!
