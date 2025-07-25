@@ -1,67 +1,40 @@
 ---
-title: "Building the PerfectFit Website: Lessons in Teamwork, Prioritization, and Tech"
-description: "Finishing the PerfectFit homepage taught me valuable lessons in teamwork, prioritization, and web development tools."
-date: "2024-11-08"
+title: "My Journey into Swift & SwiftUI 🚀"
+description: "I recently started learning Swift and SwiftUI to build iOS apps! Here's my experience so far and the anime schedule tracker I'm working on."
+date: 2024-09-24
 image:
-    src: "/blog/post-1/featured.png"
-    alt: "Honda NSX"
-tag: "Web Dev, Teamwork, GitHub, Bootstrap, Next.js"
+    src: "/blog/post-1/featured.jpeg"
+    alt: "AnimeTracker App"
+tag: "AnimeTracker, App Dev, Swift, Learning"
 ---
 
-## 🌟 Finished the PerfectFit Home Page! 🌟
+🚀 **Exciting news!** I recently started learning **Swift** and **SwiftUI** to build iOS apps! 💻📱
 
-I’m proud to say that I have finished the home page for **PerfectFit**, my team’s mock clothes fitting app website! 🎉
+I'm currently following **Apple's official guide** to build a **Landmarks app**, getting comfortable with **Swift syntax** and learning how iOS apps are structured.
 
-It isn’t anything special, but it's an experience I can take a lot away from.
+As a **side project**, I started applying the concepts I learned in the **Landmarks tutorial** to build my own app: an **Anime Schedule Tracker!** 🎌
 
-## 👥 Lessons from Teamwork
+<img src="/public/blog/post-1/details.jpeg" alt="details page" style="max-height: 800px; width: auto">
 
-Working with a team to build this website, I’ve learned the practical importance of **clear communication** and **setting deadlines** 📅.
+### **Why Build This App?**
 
-Having regular discussions to track each teammate’s progress and align on the site’s vision helped us:
+It always bothered me that I couldn't conveniently check the **release schedule** for my favorite shows 😤.
+Relying on **random websites** or **Crunchyroll's incomplete schedule** wasn't cutting it.
 
-- ✅ Develop ideas like the **clothing viewer page** and **scrolling background logos**
-- ✅ Set **smaller deadlines** to accomplish bigger tasks
-- ✅ Complete the website **before the deadline of November 12, 2024**
+So, I thought—why not **create my own** app?
 
-## 🎯 Prioritization & Project Scope
+### **💡 Features So Far:**
 
-I originally planned for:
-- ✨ Smooth transitions and animations
-- 📜 Scroll-triggered elements
+✅ Imports shows from a data file 📂
+✅ Dedicated page for each anime 📄
+✅ Ability to favorite anime ⭐
+✅ Sort by favorites for easy access 📊
 
-However, I learned that **prioritizing key tasks** over adding every feature is crucial. Cutting ✂️ some ideas let me focus on **delivering a polished homepage** instead of an incomplete website.
+<img src="/public/blog/post-1/favorites.jpeg" alt="favorites list page" style="max-height: 800px; width: auto">
 
-<img src="/public/blog/post-1/home.png" alt="home page" style="max-height: 800px; width: auto">
+### **🚀 What's Next?**
 
-***
+I plan to **add more features soon**, including implementing the **actual schedule page!** 📅
 
-## 💻 New Skills & Technologies
-
-During this project, I:
-- ✅ Learned **Git & GitHub** for collaboration
-- ✅ Used **Bootstrap** for layout and styling
-- ✅ Got hands-on experience working in a **team-based web project**
-
-I'm already applying these skills as a **Software Engineer on the University of Ottawa Supermileage team** 🏎️, and I plan to use them more in personal projects!
-
-## 🚀 What’s Next?
-
-This project gave me insight into **real-world software engineering**, but I also want to improve:
-🔀 **HTML structure** – Next time, I’ll make it cleaner and more maintainable.
-🎨 **Better animations & transitions** – I need to research this further.
-🛠️ **New technologies** – My next projects will use:
-   - **Tailwind CSS** & **SASS** for styling
-   - **React** with **Next.js** for building scalable web apps
-
-I also plan to **fork 🍴 this repository** and turn PerfectFit into a real product in the future. But for now, I’m focusing on:
-1. **Building my portfolio site** with modern web tech
-2. **Continuing my Anime App project** for more development experience
-
-## 💬 Your Thoughts?
-
-[Check out the PerfectFite Site](https://seg-perfect-fit.github.io/perfect-fit-site/)
-
-Have you done web development before? Did you use frameworks like **Next.js** or libraries like **React**? Is there anything you want to learn in the future?
-
-Let me know in the comments! 😄
+Let me know what you guys think! 👇
+**Have you ever tried making an app before?** 💬👨‍💻👩‍💻
