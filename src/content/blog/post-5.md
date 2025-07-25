@@ -1,7 +1,7 @@
 ---
 title: "✨ Progress Update on My Anime Tracker App!"
 description: "Over the past few weeks, I’ve been making big strides in building my Anime Schedule App, from learning Swift to designing with Figma!"
-date: 2025-01-07
+date: 2025-01-7
 image:
     src: "/blog/post-5/featured.jpeg"
     alt: "SyncSlash Game"

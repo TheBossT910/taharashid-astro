@@ -1,7 +1,7 @@
 ---
 title: "Building the PerfectFit Website: Lessons in Teamwork, Prioritization, and Tech"
 description: "Finishing the PerfectFit homepage taught me valuable lessons in teamwork, prioritization, and web development tools."
-date: "2024-11-08"
+date: 2024-11-8
 image:
     src: "/blog/post-2/featured.png"
     alt: "Honda NSX"
