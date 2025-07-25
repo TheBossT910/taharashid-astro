@@ -37,8 +37,8 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
+        text: 'Devlogs',
+        href: '/blog/devlogs',
       },
       {
         text: 'Talks',
@@ -57,8 +57,8 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
+        text: 'Devlogs',
+        href: '/blog/devlogs',
       },
       {
         text: 'Talks',
