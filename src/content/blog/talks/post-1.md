@@ -3,7 +3,7 @@ title: "My Journey into Swift & SwiftUI 🚀"
 description: "I recently started learning Swift and SwiftUI to build iOS apps! Here's my experience so far and the anime schedule tracker I'm working on."
 date: 2024-09-24
 image:
-    src: "/blog/post-1/featured.jpeg"
+    src: "/blog/talks/post-1/featured.jpeg"
     alt: "AnimeTracker App"
 tag: "AnimeTracker, App Dev, Swift, Learning"
 ---
@@ -14,7 +14,7 @@ I'm currently following **Apple's official guide** to build a **Landmarks app**,
 
 As a **side project**, I started applying the concepts I learned in the **Landmarks tutorial** to build my own app: an **Anime Schedule Tracker!** 🎌
 
-<img src="/public/blog/post-1/details.jpeg" alt="details page" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-1/details.jpeg" alt="details page" style="max-height: 800px; width: auto">
 
 ### **Why Build This App?**
 
@@ -30,7 +30,7 @@ So, I thought—why not **create my own** app?
 ✅ Ability to favorite anime ⭐
 ✅ Sort by favorites for easy access 📊
 
-<img src="/public/blog/post-1/favorites.jpeg" alt="favorites list page" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-1/favorites.jpeg" alt="favorites list page" style="max-height: 800px; width: auto">
 
 ### **🚀 What's Next?**
 

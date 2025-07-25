@@ -3,7 +3,7 @@ title: "Koyomi – Your Ultimate Anime Tracker! 🎉"
 description: "I've finally released AnimeTracker in Beta after 5+ months of development. Stay on top of your anime schedule with Koyomi, the easiest way to track release schedules, organize your watchlist, and never miss an episode again!"
 date: 2025-03-28
 image:
-    src: "/blog/post-9/featured.png"
+    src: "/blog/talks/post-9/featured.png"
     alt: "AnimeTracker App"
 tag: "AnimeTracker, App Dev, Beta"
 ---
@@ -13,7 +13,7 @@ Forgot what shows you were watching, or when they were releasing? Not sure which
 
 🎉 **Introducing Koyomi – Your Ultimate Anime Tracker!**
 
-<img src="/public/blog/post-9/home-signed-in.png" alt="home page" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-9/home-signed-in.png" alt="home page" style="max-height: 800px; width: auto">
 
 Yes, that’s right! After **5+ months of development**, **AnimeTracker** is officially in **beta**, and is now called **Koyomi**!
 
@@ -24,15 +24,15 @@ Yes, that’s right! After **5+ months of development**, **AnimeTracker** is off
 
 ✅ **Track Your Anime** – Add shows to your *Favorites* and organize them into *Watching, Completed, Plan to Watch,* and *Dropped* lists.
 
-<img src="/public/blog/post-9/home-watchlists.png" alt="watchlists page" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-9/home-watchlists.png" alt="watchlists page" style="max-height: 800px; width: auto">
 
 📆 **Weekly Release Calendar** – View an up-to-date schedule of anime episodes airing each day.
 
-<img src="/public/blog/post-9/schedule-airing-one.png" alt="airing view" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-9/schedule-airing-one.png" alt="airing view" style="max-height: 800px; width: auto">
 
 📖 **Anime Details** – Instantly access show descriptions and schedules.
 
-<img src="/public/blog/post-9/list.png" alt="list view" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-9/list.png" alt="list view" style="max-height: 800px; width: auto">
 
 ## 🚀 Coming Soon
 
@@ -43,7 +43,7 @@ Yes, that’s right! After **5+ months of development**, **AnimeTracker** is off
 5. **Sync with Google Calendar** – Never miss an episode again!
 6. **Genre Sorting & Search** – Quickly find the anime that you've always been searching for!
 
-<img src="/public/blog/post-9/schedule-one.png" alt="schedule page" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-9/schedule-one.png" alt="schedule page" style="max-height: 800px; width: auto">
 
 ## 💡 Future Plans
 

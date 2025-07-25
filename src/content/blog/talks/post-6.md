@@ -3,7 +3,7 @@ title: "Major Updates to My AnimeTracker App!"
 description: "Major updates to the AnimeTracker app, including new features, optimizations, AI-powered show recaps, and plans for future improvements!"
 date: 2025-02-21
 image:
-    src: "/blog/post-6/featured.png"
+    src: "/blog/talks/post-6/featured.png"
     alt: "AnimeTracker App"
 tag: "AnimeTracker, AI, App Dev, Swift, APIs"
 ---
@@ -22,17 +22,17 @@ There's still a lot to do, but here’s what I’ve accomplished in the past 2 m
 - 📱 Ensured compatibility with **ALL modern iPhones/iPads**
 - 🔤 Changed font design/weights
 
-<img src="/public/blog/post-6/detail-light.png" alt="details light mode" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-6/detail-light.png" alt="details light mode" style="max-height: 800px; width: auto">
 
-<img src="/public/blog/post-6/detail-dark.png" alt="detials dark mode" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-6/detail-dark.png" alt="detials dark mode" style="max-height: 800px; width: auto">
 
 ### **Created a New Page: Schedule Page** 📅
 - 🔥 See popular airing shows
 - 📜 View your list of shows airing this week, with **custom AI recaps** for **ALL shows** 🤖
 
-<img src="/public/blog/post-6//schedule-one.png" alt="schedule top" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-6//schedule-one.png" alt="schedule top" style="max-height: 800px; width: auto">
 
-<img src="/public/blog/post-6/schedule-airing.png" alt="schedule airing" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-6/schedule-airing.png" alt="schedule airing" style="max-height: 800px; width: auto">
 
 ### **Fetching REAL Data from AniList and TVDB APIs** 🔗
 - 📸 Grabs show and episode information, including images and descriptions
@@ -44,7 +44,7 @@ There's still a lot to do, but here’s what I’ve accomplished in the past 2 m
 - 🧪 Tried multiple AI models (like **ChatGPT-4**, **DeepSeekR1** on Azure), but they didn’t work as expected
 - 💰 Azure models and APIs were costly, so I switched to running the **Mistral model** locally via **Ollama** ⚙️
 
-<img src="/public/blog/post-6/schedule-ai-recap.png" alt="schedule ai recap" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-6/schedule-ai-recap.png" alt="schedule ai recap" style="max-height: 800px; width: auto">
 
 ### **Debugging, Debugging, Optimizing, Debugging...** 😭🐛
 
@@ -53,7 +53,7 @@ There's still a lot to do, but here’s what I’ve accomplished in the past 2 m
 - 📊 Create more **data-scraping scripts** for currently airing shows, search results, etc.
 - ⚡ Optimize **ALL clients** for faster database access (reads/writes)
 
-<img src="/public/blog/post-6/home.png" alt="home scrren light mode" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-6/home.png" alt="home scrren light mode" style="max-height: 800px; width: auto">
 
 Let me know what you think of my app so far! Any suggestions or feature recommendations? 🤔
 

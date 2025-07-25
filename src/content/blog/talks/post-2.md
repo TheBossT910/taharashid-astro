@@ -3,7 +3,7 @@ title: "Building the PerfectFit Website: Lessons in Teamwork, Prioritization, an
 description: "Finishing the PerfectFit homepage taught me valuable lessons in teamwork, prioritization, and web development tools."
 date: 2024-11-8
 image:
-    src: "/blog/post-2/featured.png"
+    src: "/blog/talks/post-2/featured.png"
     alt: "Honda NSX"
 tag: "Web Dev, Teamwork, GitHub, Bootstrap, Next.js"
 ---
@@ -32,7 +32,7 @@ I originally planned for:
 
 However, I learned that **prioritizing key tasks** over adding every feature is crucial. Cutting ✂️ some ideas let me focus on **delivering a polished homepage** instead of an incomplete website.
 
-<img src="/public/blog/post-2/home.png" alt="home page" style="max-height: 800px; width: auto">
+<img src="/public/blog/talks/post-2/home.png" alt="home page" style="max-height: 800px; width: auto">
 
 ***
 
