@@ -4,7 +4,7 @@ export const siteConfig = {
   subtitle: `Taha Rashid's portfolio, with his blog and devlogs.`,
   description: `A portfolio and blog for Taha Rashid's experiences`,
   image: {
-    src: '/hero.jpg',
+    src: '/savepoint_home.png',
     alt: 'Website Main Image',
   },
   email: 'taharashid710192@gmail.com',
@@ -79,6 +79,10 @@ export const siteConfig = {
       {
         text: 'GitHub Repository',
         href: 'https://github.com/TheBossT910/taharashid-astro',
+      },
+      {
+        text: 'Resume',
+        href: 'https://drive.google.com/file/d/1FCsYfRcowe-pSCqB76E0Ow05BtVqel43/view?usp=sharing',
       },
     ],
   },
