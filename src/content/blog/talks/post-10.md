@@ -1,11 +1,11 @@
 ---
 title: "Introducing My Biggest Project Yet: SavePoint"
 description: "After finishing an amazing first year at uOttawa, I’m excited to announce the project I’ve been dreaming about for years: SavePoint—a cross-platform app for tracking video game collections and helping game stores modernize. Here’s everything I’ve been working on and what’s coming next. "
-date: 2025-05-17
+date: 2025-06-15
 image:
     src: "/blog/post-10/details.png"
     alt: "SavePoint App"
-tag: "AnimeTracker, App Dev, Beta"
+tag: "SavePoint, App Dev, Figma"
 ---
 
 ## It’s been a little over 2 weeks since my first year at uOttawa came to a close.
