@@ -39,18 +39,6 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
-      {
-        text: 'Koyomi',
-        href: '/blog/koyomidevlogs',
-      },
-      {
-        text: 'SavePoint',
-        href: '/blog/savepointdevlogs',
-      },
-      {
         text: 'Projects',
         href: '/projects',
       },
