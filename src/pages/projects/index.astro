@@ -17,7 +17,7 @@ import ListProjects from '@/components/ListProjects.vue'
                   {i.title}
                 </span>
               </h2>
-              <ListProjects list={i.projects} />
+              <ListProjects client:load list={i.projects} />
             </div>
           ))}
         </div>
