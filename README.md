@@ -1,111 +1,182 @@
-# Vitesse theme for Astro
+# Taha Rashid's Portfolio Website
 
-A minimal, SEO-friendly portfolio and blog theme for Astro, supports Vue and UnoCSS.
+[![Website](https://img.shields.io/website?url=https%3A//taharashid.com)](https://taharashid.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0624323a-339f-48da-8b28-03037d664c40/deploy-status)](https://app.netlify.com/sites/astro-theme-vitesse/deploys)
+A modern, minimal, and SEO-friendly portfolio website for Taha Rashid, a Software Engineering student at the University of Ottawa. The site showcases projects, development blogs, and professional experience.
 
-## Preview
+🌐 **Live Site**: [taharashid.com](https://taharashid.com)
 
-![Preview Image](./public/preview.jpg)
+## ✨ Features
 
-## Features
+- **🎨 Modern Design**: Clean, responsive design with dark/light theme support
+- **📝 Blog System**: Multiple blog categories including project devlogs and talks
+- **🚀 Performance**: Built with Astro for optimal loading speeds
+- **📱 Mobile-First**: Fully responsive across all device sizes
+- **🔍 SEO Optimized**: Automatic sitemap generation and meta tags
+- **⚡ Fast Development**: Hot module replacement and modern tooling
 
-- 100 / 100 Lighthouse performance.
-- Responsive.
-- SEO-friendly.
-- Light / Dark Theme.
-- Markdown support.
-- <a target="_blank" href="https://mdxjs.com/">MDX</a> (components in your markdown) support.
-- <a target="_blank" href="https://vuejs.org/">Vue</a> SFC component support.
-- Auto generated sitemap and RSS Feed <a target="_blank" href="https://vueuse.org/">VueUse</a> & <a target="_blank" href="https://lodash.com/">Lodash</a> support.
-- Use the <a target="_blank" href="https://unocss.dev/">UnoCSS</a> for style, it's fast.
+## 🛠️ Tech Stack
 
-## Lighthouse Performance
+- **Framework**: [Astro](https://astro.build/) - Static site generator
+- **UI Framework**: [Vue.js](https://vuejs.org/) - Interactive components
+- **Styling**: [UnoCSS](https://unocss.dev/) - Atomic CSS framework
+- **Content**: [MDX](https://mdxjs.com/) - Markdown with JSX support
+- **Icons**: [Iconify](https://iconify.design/) - Comprehensive icon library
+- **Deployment**: Hosted on [taharashid.com](https://taharashid.com)
 
-![Lighthouse Performance Image](./public/lighthouse.jpg)
+## 📁 Project Structure
 
-## Quick Start
-
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kieranwv/astro-theme-vitesse)
-
-Click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
-
-If you  just want to develop locally, you can [create a repo](https://github.com/kieranwv/astro-theme-vitesse/generate) from this template on GitHub.
-
-## Usage
-
-First, install the dependencies.
-
-```bash
-npm install
+```
+src/
+├── components/          # Reusable Vue/Astro components
+│   ├── Header.vue      # Site navigation
+│   ├── Footer.vue      # Site footer
+│   ├── ListPosts.vue   # Blog post listings
+│   └── ...             # Other components
+├── content/            # Content collections
+│   ├── blog/           # Blog posts organized by category
+│   │   ├── koyomidevlogs/     # Koyomi project devlogs
+│   │   ├── savepointdevlogs/  # SavePoint project devlogs
+│   │   └── talks/             # Conference talks and presentations
+│   └── pages/          # Static pages
+├── layouts/            # Page layouts
+│   └── BaseLayout.astro
+├── pages/              # Route pages
+│   ├── index.astro     # Homepage
+│   ├── projects/       # Projects showcase
+│   └── posts/          # Dynamic blog routes
+├── utils/              # Utility functions
+└── site-config.ts      # Site configuration
 ```
 
-Just run and visit http://localhost:1977.
+## 🚀 Quick Start
 
-```bash
-npm run dev
+### Prerequisites
+- Node.js 18.17.1+ or 20.3.0+ or 21+
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/TheBossT910/taharashid-astro.git
+   cd taharashid-astro
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:1977`
+
+### Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues automatically
+
+## 📝 Content Management
+
+### Adding Blog Posts
+
+Blog posts are organized into categories under `src/content/blog/`:
+
+- **Koyomi Devlogs** (`koyomidevlogs/`) - Development updates for the Koyomi anime tracker app
+- **SavePoint Devlogs** (`savepointdevlogs/`) - Development updates for the SavePoint game collection platform
+- **Talks** (`talks/`) - Conference presentations and technical talks
+
+#### Blog Post Format
+
+```markdown
+---
+title: "Your Post Title"
+description: "Brief description of the post"
+date: 2025-01-01
+draft: false
+tag: "optional-tag"
+video: false
+---
+
+Your content here using Markdown or MDX...
 ```
 
-> Node.js version 18 or higher is required for this project.
+### Adding Projects
 
-To build the App, you can run:
+Projects are defined in `src/pages/projects/data.ts`. Each project includes:
 
-```bash
-npm run build
-```
+- Title and description
+- Technology stack with icons
+- Project image
+- GitHub repository link
+- Category (Personal/University)
 
-You will then see the `dist` folder generated for publishing, which you can preview locally with the following command.
+## 🎨 Customization
 
-```bash
-npm run preview
-```
+### Site Configuration
 
-## Use pnpm / yarn
+Edit `src/site-config.ts` to customize:
+- Personal information
+- Social media links
+- Navigation menu
+- Footer links
 
-If you want to use pnpm or yarn as a package management tool, please refer to the following steps.
+### Styling
 
-> If `preinstall` exists in `scripts`, remove it first.
+The site uses UnoCSS for styling. Custom styles can be added in:
+- `uno.config.ts` - UnoCSS configuration
+- Component-level styles using UnoCSS classes
 
-### pnpm
+### Theme
 
-Replace `"pre-commit": "npx lint-staged"` in package.json with `"pre-commit": "pnpm lint-staged"`.
+The site supports dark/light themes with automatic system preference detection. Theme toggle is available in the header.
 
-And replace `"*": "npm run lint:fix"` with `"*": "pnpm lint:fix"`.
+## 📊 Analytics & SEO
 
-Like this:
+- **Sitemap**: Automatically generated at `/sitemap-index.xml`
+- **RSS Feed**: Available for blog posts
+- **Meta Tags**: Configured for optimal social media sharing
+- **Performance**: Optimized for Core Web Vitals
 
-```json
-{
-  // ...
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "pnpm lint:fix"
-  }
-}
-```
+## 🚦 Featured Projects
 
-### yarn
+### SavePoint
+A modern web-first platform for video game collection management, built with Vue.js, Express.js, and Supabase.
 
-Replace `"pre-commit": "npx lint-staged"` in package.json with `"pre-commit": "yarn lint-staged"`.
+### Koyomi Anime Tracker
+iOS/macOS app for tracking anime viewing progress, developed with Swift and Firebase.
 
-And replace `"*": "npm run lint:fix"` with `"*": "yarn lint:fix"`.
+### Additional Projects
+- SyncSlash 2D game (Unity/C#)
+- Anki plugin for Japanese verb transitivity
+- University coursework projects
 
-Like this:
+## 🤝 Contributing
 
-```json
-{
-  // ...
-  "simple-git-hooks": {
-    "pre-commit": "yarn lint-staged"
-  },
-  "lint-staged": {
-    "*": "yarn lint:fix"
-  }
-}
-```
+This is a personal portfolio site, but suggestions and bug reports are welcome! Please open an issue or submit a pull request.
 
-## License
+## 📄 License
 
-[MIT License](./LICENSE) © 2024 [Kieran Wang](https://github.com/kieranwv/)
+This project is based on the Vitesse Astro Template by Kieran Wang.
+
+- [MIT License](./LICENSE) © 2025 [Taha Rashid](https://github.com/TheBossT910)
+- [MIT License](./LICENSE) © 2024 [Kieran Wang](https://github.com/kieranwv/) (Original template)
+
+## 📞 Contact
+
+- **Email**: taharashid710192@gmail.com
+- **LinkedIn**: [taha-rashid192](https://www.linkedin.com/in/taha-rashid192/)
+- **GitHub**: [TheBossT910](https://github.com/TheBossT910)
+- **Instagram**: [thebosst710192](https://www.instagram.com/thebosst710192/)
+
+---
+
+*Built with ❤️ by Taha Rashid using Astro, Vue.js, and UnoCSS*
