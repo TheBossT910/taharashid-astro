@@ -7,4 +7,4 @@ date: 2025-3-29
 *AnimeTracker*
 
 Inspiration for glassmorphism:
-<img src="/public/blog/koyomidevlogs/post-48/example-1.jpg" alt="drawing" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-48/example-1.jpg" alt="drawing" style="max-height: 800px; width: auto">

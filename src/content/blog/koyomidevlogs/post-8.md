@@ -13,7 +13,7 @@ date: 2024-12-22
 - Currently now plan to research how Firestore works (so I can store the splash/box images, etc. into the cloud and retrieve them)
 - Asked AI about monetization:
 
-<img src="/public/blog/koyomidevlogs/post-8/ai-monetization.png" alt="screenshot of ChatGPT result" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-8/ai-monetization.png" alt="screenshot of ChatGPT result" style="max-height: 800px; width: auto">
 
 Next steps:
 - Implement Firebase data into the main app, then merge the branch into main

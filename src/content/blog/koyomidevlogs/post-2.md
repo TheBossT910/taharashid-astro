@@ -35,10 +35,10 @@ date: 2024-11-16
 
 ## Current home screen design
 **Low fidelity**
-<img src="/public/blog/koyomidevlogs/post-2/home-low-detail.png" alt="home low detail" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-2/home-low-detail.png" alt="home low detail" style="max-height: 800px; width: auto">
 
 **High fidelity**
-<img src="/public/blog/koyomidevlogs/post-2/home-high-detail.png" alt="home high detail" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-2/home-high-detail.png" alt="home high detail" style="max-height: 800px; width: auto">
 
 - I think I need to "dim" the show's splashes in the calendar &rarr; add a square over the area, and have a dark color, with opacity so you can see through it.
   - The logos should be above this though

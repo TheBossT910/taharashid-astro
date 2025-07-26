@@ -38,4 +38,4 @@ date: 2025-2-20
 - Worked on the Swift client, starting to make the new database class and made a tester for it too
     - It is working, but takes a while to load in everything, which is annoying (need to fix)
 
-<img src="/public/blog/koyomidevlogs/post-31/drawing.png" alt="drawing" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-31/drawing.png" alt="drawing" style="max-height: 800px; width: auto">

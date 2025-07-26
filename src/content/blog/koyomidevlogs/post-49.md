@@ -6,7 +6,7 @@ date: 2025-2-23
 
 *AnimeTracker*
 
-<img src="/public/blog/koyomidevlogs/post-49/animetracker-designs.jpg" alt="drawing" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-49/animetracker-designs.jpg" alt="drawing" style="max-height: 800px; width: auto">
 
 Pages:
 - Home

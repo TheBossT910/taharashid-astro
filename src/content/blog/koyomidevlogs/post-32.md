@@ -14,8 +14,8 @@ date: 2025-2-22
 - Need to also properly flesh-out our features/the pages we want
 
 Here are some app inspirations:
-<img src="/public/blog/koyomidevlogs/post-32/example-1.png" alt="example 1" style="max-height: 800px; width: auto">
-<img src="/public/blog/koyomidevlogs/post-32/example-2.png" alt="example 2" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-32/example-1.png" alt="example 1" style="max-height: 800px; width: auto">
+<img src="/blog/koyomidevlogs/post-32/example-2.png" alt="example 2" style="max-height: 800px; width: auto">
 
 - Themes
     - Krona One for big text
