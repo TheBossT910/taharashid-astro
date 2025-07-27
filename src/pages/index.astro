@@ -3,6 +3,12 @@ import ListProjects from '@/components/ListProjects.vue'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
 import { homePageExperiences } from './experiences/data'
+import ListPosts from '@/components/ListPosts.vue'
+import { getPosts } from '@/utils/posts'
+
+const { path } = Astro.params
+
+const posts = await getPosts(path)
 ---
 
 <BaseLayout description={siteConfig.description}>
@@ -39,12 +45,26 @@ import { homePageExperiences } from './experiences/data'
     </ul>
 
     <p>I'm also seeking co-op opportunities for Winter 2026 in Software Engineering</p>
-
-    <hr class="hr-line" />
   </article>
 
+  <hr class="hr-line" />
+
+  <!-- Latest devlog and post -->
   <div>
-    <h1 class="mb-10 text-title">My Latest Experiences</h1>
+    <h1 class="text-title">Latest Posts</h1>
+    <ListPosts
+      list={[posts.filter((p) => p.id.includes('talks/post-'))[0]].concat([
+        posts.filter((p) => p.id.includes('devlogs'))[0],
+      ])}
+    />
+  </div>
+
+  <hr class="hr-line" />
+
+  <!-- Experiences -->
+  <div>
+    <h1 class="mb-10 text-title">Latest Experiences</h1>
+
     <div mb-8 sm:mb-12>
       {(<ListProjects client:load list={homePageExperiences[0].projects} />)}
     </div>
