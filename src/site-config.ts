@@ -39,8 +39,8 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Projects',
-        href: '/projects',
+        text: 'Experiences',
+        href: '/experiences',
       },
       {
         text: 'Resume',

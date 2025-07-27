@@ -8,7 +8,7 @@ export type Pages = 'pages'
 
 export type CollectionPages = CollectionEntry<Pages>
 
-export type ProjectData = Array<{
+export type ExperienceData = Array<{
   title: string
   projects: Array<{
     text: string

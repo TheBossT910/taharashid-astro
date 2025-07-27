@@ -1,12 +1,12 @@
-import type { ProjectData } from '@/types'
+import type { ExperienceData } from '@/types'
 
-export const projectData: ProjectData = [
+export const experienceData: ExperienceData = [
   {
     title: 'Work',
     projects: [
       {
         text: 'Software Engineering Intern',
-        description: 'Worked on an internal admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries with Vue and .NET',
+        description: 'Worked on an internal admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries with Vue and .NET.',
         icon: 'i-ri-price-tag-3-fill',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-bootstrap', 'i-devicon-typescript', 'i-devicon-csharp', 'i-devicon-sass'],
         image: '/projects/oliverslabels.jpeg',
@@ -19,7 +19,7 @@ export const projectData: ProjectData = [
     projects: [
       {
         text: 'SavePoint - The Modern Game Collection Platform',
-        description: 'A web-first app built to modernize how people collect and manage video games while also helping retro game stores to digitize their inventory, pricing, and storefronts',
+        description: 'A web-first app built to modernize how people and businessescollect and manage video games.',
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-express', 'i-devicon-figma', 'i-devicon-supabase', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint.png',
