@@ -1,6 +1,8 @@
 ---
+import ListProjects from '@/components/ListProjects.vue'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
+import { homePageExperiences } from './experiences/data'
 ---
 
 <BaseLayout description={siteConfig.description}>
@@ -38,10 +40,17 @@ import siteConfig from '@/site-config'
 
     <p>I'm also seeking co-op opportunities for Winter 2026 in Software Engineering</p>
 
+    <hr class="hr-line" />
+  </article>
+
+  <div>
+    <h1 class="mb-10 text-title">My Latest Experiences</h1>
+    <div mb-8 sm:mb-12>
+      {(<ListProjects client:load list={homePageExperiences[0].projects} />)}
+    </div>
     <img src="/github-contributions.png" class="rounded-10" />
 
-    <hr class="hr-line" />
-    <p>Find me on</p>
+    <p class="mt-10">Find me on</p>
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
         siteConfig.socialLinks.map((link) => (
@@ -58,5 +67,5 @@ import siteConfig from '@/site-config'
         {siteConfig.email}
       </a>.
     </p>
-  </article>
+  </div>
 </BaseLayout>
