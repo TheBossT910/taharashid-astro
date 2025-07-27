@@ -2,6 +2,19 @@ import type { ProjectData } from '@/types'
 
 export const projectData: ProjectData = [
   {
+    title: 'Work',
+    projects: [
+      {
+        text: 'Software Engineering Intern',
+        description: 'Worked on an internal admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries with Vue and .NET',
+        icon: 'i-ri-price-tag-3-fill',
+        skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-bootstrap', 'i-devicon-typescript', 'i-devicon-csharp', 'i-devicon-sass'],
+        image: '/projects/oliverslabels.jpeg',
+        href: 'https://www.oliverslabels.com/',
+      },
+    ],
+  },
+  {
     title: 'Personal',
     projects: [
       {

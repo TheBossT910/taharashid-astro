@@ -73,5 +73,9 @@ export default defineConfig({
     'i-devicon-typescript',
     'i-devicon-tailwindcss',
     'i-devicon-figma',
+    'i-devicon-bootstrap',
+    'i-devicon-dot-net-wordmark',
+    'i-ri-price-tag-3-fill',
+    'i-devicon-sass',
   ],
 })
