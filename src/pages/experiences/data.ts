@@ -80,7 +80,7 @@ export const homePageExperiences: ExperienceData = [
       },
       {
         text: 'SavePoint - The Modern Game Collection Platform',
-        description: 'A web-first app built to modernize how people and businessescollect and manage video games.',
+        description: 'A web-first app built to modernize how people and businesses collect and manage video games.',
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-express', 'i-devicon-figma', 'i-devicon-supabase', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint.png',
