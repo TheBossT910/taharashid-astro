@@ -37,6 +37,18 @@ function isSameYear(a: Date | string | number, b: Date | string | number) {
 function getYear(date: Date | string | number) {
   return new Date(date).getFullYear()
 }
+
+// checks if a post should be displayed if it is scheduled in the future
+function showPost(postDateString: string) {
+  const currentDate = new Date()
+  const postDate = new Date(postDateString)
+  currentDate.setHours(0, 0, 0, 0)
+  postDate.setHours(0, 0, 0, 0)
+
+  if (currentDate >= postDate)
+    return true
+  return false
+}
 </script>
 
 <template>
@@ -52,7 +64,7 @@ function getYear(date: Date | string | number) {
           {{ getYear(post.data.date) }}
         </span>
       </div>
-      <a text-lg lh-tight nav-link flex="~ col gap-2" :aria-label="post.data.title" :target="getTarget(post)" :href="getHref(post)">
+      <a v-show="showPost(post.data.date)" text-lg lh-tight nav-link flex="~ col gap-2" :aria-label="post.data.title" :target="getTarget(post)" :href="getHref(post)">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ gap-2 items-center text-wrap">
             <span lh-normal>

@@ -25,23 +25,36 @@ const { Content } = await post.render()
 function getDate(date: string) {
   return new Date(date).toISOString()
 }
+
+// checks if a post should be rendered if it is scheduled in the future
+function renderPost(postDateString: string) {
+  const currentDate = new Date()
+  const postDate = new Date(postDateString.replaceAll(',', ''))
+  currentDate.setHours(0, 0, 0, 0)
+  postDate.setHours(0, 0, 0, 0)
+
+  if (currentDate >= postDate) return true
+  return false
+}
 ---
 
-<BaseLayout title={title} description={description} pageType="article">
-  <article class="prose">
-    <h1>{title}</h1>
-    <p op-50>
-      {date && <time datetime={getDate(date)}>{date.split(',')}</time>}
-      {duration && <span>· {duration}</span>}
-      {tag && <span>· {tag}</span>}
-    </p>
-    {
-      image && (
-        <p>
-          <img width="640" height="360" src={image.src} alt={image.alt || ''} />
+{
+  renderPost(date) && (
+    <BaseLayout title={title} description={description} pageType="article">
+      <article class="prose">
+        <h1>{title}</h1>
+        <p op-50>
+          {date && <time datetime={getDate(date)}>{date.split(',')}</time>}
+          {duration && <span>· {duration}</span>}
+          {tag && <span>· {tag}</span>}
         </p>
-      )
-    }
-    <Content />
-  </article>
-</BaseLayout>
+        {image && (
+          <p>
+            <img width="640" height="360" src={image.src} alt={image.alt || ''} />
+          </p>
+        )}
+        <Content />
+      </article>
+    </BaseLayout>
+  )
+}
