@@ -67,7 +67,7 @@ const posts = await getPosts(path)
     <h1 class="mb-10 text-title">Latest Experiences</h1>
 
     <div mb-8 sm:mb-12>
-      {(<ListProjects client:load list={homePageExperiences[0].projects} />)}
+      {(<ListProjects client:visible list={homePageExperiences[0].projects} />)}
     </div>
 
     <a href="https://github.com/TheBossT910">
