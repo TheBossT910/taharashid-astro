@@ -53,6 +53,7 @@ const posts = await getPosts(path)
   <div>
     <h1 class="text-title">Latest Posts</h1>
     <ListPosts
+      client:visible
       list={[posts.filter((p) => p.id.includes('talks/post-'))[0]].concat([
         posts.filter((p) => p.id.includes('devlogs'))[0],
       ])}
