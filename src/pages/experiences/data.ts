@@ -6,7 +6,7 @@ export const experienceData: ExperienceData = [
     projects: [
       {
         text: 'Software Engineering Intern',
-        duration: 'May 2024 – Aug. 2024',
+        duration: 'May 2025 – Aug. 2025',
         description: 'Worked on an internal admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries with Vue and .NET.',
         icon: 'i-ri-price-tag-3-fill',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-bootstrap', 'i-devicon-typescript', 'i-devicon-sass'],
