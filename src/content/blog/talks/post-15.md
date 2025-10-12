@@ -5,7 +5,7 @@ date: 2025-09-12
 image:
     src: "/blog/talks/post-15/savepoint-home.jpeg"
     alt: "SavePoint home page"
-tag: "Portfolio, SavePoint, Web Dev, Astro, Vue"
+tag: "SavePoint, Web Dev, Vue, Nuxt, .NET, MS SQL"
 ---
 
 SavePoint is closer to launch than ever before!
