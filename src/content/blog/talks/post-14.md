@@ -4,7 +4,7 @@ description: "I recently completed my first internship at Oliver’s Labels in N
 date: 2025-09-05
 image:
     src: "/blog/talks/post-14/ol-logo.jpeg"
-    alt: "..."
+    alt: "Oliver's Labels logo"
 tag: "Fullstack, Web Dev, Vue, Nuxt, .NET, Internship"
 ---
 
