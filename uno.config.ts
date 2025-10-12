@@ -66,7 +66,6 @@ export default defineConfig({
     'i-devicon-firebase',
     'i-devicon-vuejs',
     'i-devicon-express',
-    'i-devicon-supabase',
     'i-devicon-css3',
     'i-devicon-html5',
     'i-devicon-javascript',
@@ -77,5 +76,6 @@ export default defineConfig({
     'i-devicon-dot-net-wordmark',
     'i-ri-price-tag-3-fill',
     'i-devicon-sass',
+    'i-devicon-microsoftsqlserver-wordmark',
   ],
 })
