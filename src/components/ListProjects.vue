@@ -69,6 +69,7 @@ defineProps<{
             <!-- Text & Languages -->
             <div font-normal lh-tight class="mt-2">
               <div text-lg text-main text-black>{{ project.text }}</div>
+              <small text-sm text-secondary>{{ project.duration }}</small>
               <div class="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-sm">
                 <i v-for="skill in project.skills" :key="skill" text-3xl :class=" skill || 'i-carbon-unknown'" />
               </div>
