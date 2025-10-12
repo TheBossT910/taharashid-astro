@@ -12,6 +12,7 @@ export type ExperienceData = Array<{
   title: string
   projects: Array<{
     text: string
+    duration: string
     description?: string
     icon?: string
     skills?: string[]

@@ -6,6 +6,7 @@ export const experienceData: ExperienceData = [
     projects: [
       {
         text: 'Software Engineering Intern',
+        duration: 'May 2024 – Aug. 2024',
         description: 'Worked on an internal admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries with Vue and .NET.',
         icon: 'i-ri-price-tag-3-fill',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-bootstrap', 'i-devicon-typescript', 'i-devicon-csharp', 'i-devicon-sass'],
@@ -19,7 +20,8 @@ export const experienceData: ExperienceData = [
     projects: [
       {
         text: 'SavePoint - The Modern Game Collection Platform',
-        description: 'A web-first app built to modernize how people and businessescollect and manage video games.',
+        duration: 'Apr. 2025 – Present',
+        description: 'A web-first app built to modernize how people and businesses collect and manage video games.',
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-express', 'i-devicon-figma', 'i-devicon-supabase', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint.png',
@@ -27,6 +29,7 @@ export const experienceData: ExperienceData = [
       },
       {
         text: 'Koyomi - AnimeTracker',
+        duration: 'Oct. 2024 – Mar. 20255',
         description: 'A simple iOS app to help you track anime you\'re watching or planning to watch.',
         icon: 'i-ri-app-store-fill',
         skills: ['i-devicon-swift', 'i-devicon-firebase', 'i-devicon-figma', 'i-devicon-python'],
@@ -35,6 +38,7 @@ export const experienceData: ExperienceData = [
       },
       {
         text: 'SyncSlash - 2D Hack n Slash Sidescroller',
+        duration: 'Dec. 2024',
         description: 'A fast-paced 2D hack n slash sidescroller game currently on hiatus, developed with Unity.',
         icon: 'i-simple-icons-unity',
         skills: ['i-devicon-unity', 'i-devicon-csharp'],
@@ -43,6 +47,7 @@ export const experienceData: ExperienceData = [
       },
       {
         text: 'Anki Plugin for Japanese Verb Transivity',
+        duration: 'May 2024 – Jun. 2024',
         description: 'An Anki plugin to parse cards and append the transivity of verbs as "Self-Move" (intransitive) or "Other-Move" (transitive) to thousands of flashcards.',
         icon: 'i-simple-icons-anki',
         skills: ['i-devicon-python'],
@@ -56,6 +61,7 @@ export const experienceData: ExperienceData = [
     projects: [
       {
         text: 'PerfectFit',
+        duration: 'Sept. 2024 – Nov. 2024',
         description: 'A mockup website for an innovative clothing app designed to revolutionize the shopping experience by providing an engaging, immersive, and elegant platform.',
         icon: 'i-ri-t-shirt-2-fill',
         skills: ['i-devicon-css3', 'i-devicon-html5', 'i-devicon-javascript'],
