@@ -1,6 +1,6 @@
 ---
 title: "SavePoint: Closer to Launch Than Ever Before!"
-description: "I recently completed my first internship at Oliver’s Labels in North York, where I worked as a full-stack developer using Vue, TypeScript, ASP.NET Core, and SQL. It was an incredible experience that transformed me from a beginner into a confident developer!"
+description: "I've implemented by Figma re-designs, and restarted the backend. Now, I just need to connect the frontend/backend together, and do some bug testing!"
 date: 2025-09-12
 image:
     src: "/blog/talks/post-15/savepoint-home.jpeg"
