@@ -1,6 +1,6 @@
 ---
 title: "Design Day Victory!"
-description: "rand desc"
+description: "My team won 1st place at the University of Ottawa’s Design Day!"
 date: 2025-12-13
 image:
     src: "/blog/talks/post-16/victory.jpg"
