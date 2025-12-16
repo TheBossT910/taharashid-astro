@@ -25,7 +25,7 @@ export const experienceData: ExperienceData = [
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-microsoftsqlserver-wordmark', 'i-devicon-figma', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint.png',
-        href: 'https://github.com/TheBossT910/savepoint-web',
+        href: 'https://www.savepoint.ca/',
       },
       {
         text: 'Koyomi - AnimeTracker',
@@ -92,7 +92,7 @@ export const homePageExperiences: ExperienceData = [
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-microsoftsqlserver-wordmark', 'i-devicon-figma', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint.png',
-        href: 'https://github.com/TheBossT910/savepoint-web',
+        href: 'https://www.savepoint.ca/',
       },
     ],
   },
