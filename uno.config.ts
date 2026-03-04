@@ -77,5 +77,9 @@ export default defineConfig({
     'i-ri-price-tag-3-fill',
     'i-devicon-sass',
     'i-devicon-microsoftsqlserver-wordmark',
+    'i-devicon-cplusplus',
+    'i-devicon-c',
+    'i-devicon-xml',
+    'i-devicon-python',
   ],
 })
