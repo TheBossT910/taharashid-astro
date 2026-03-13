@@ -80,6 +80,6 @@ export default defineConfig({
     'i-devicon-cplusplus',
     'i-devicon-c',
     'i-devicon-xml',
-    'i-devicon-python',
+    'i-ph-laptop',
   ],
 })

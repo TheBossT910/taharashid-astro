@@ -25,6 +25,20 @@ export const experienceData: ExperienceData = [
     ],
   },
   {
+    title: 'Hackathons',
+    projects: [
+      {
+        text: 'Market Analysis System (MAS)',
+        duration: 'Jan. 2026',
+        description: 'An AI multi-agent financial investment advisor and dashboard powered by Solace Agent Mesh to deliver intellegent investment stratigies and stock market analysis',
+        icon: 'i-ph-laptop',
+        skills: ['i-devicon-vuejs', 'i-devicon-javascript', 'i-devicon-python'],
+        image: '/projects/mas.png',
+        href: 'https://devpost.com/software/uottahack-8',
+      },
+    ],
+  },
+  {
     title: 'Personal',
     projects: [
       {
