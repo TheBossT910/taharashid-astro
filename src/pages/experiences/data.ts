@@ -108,24 +108,8 @@ export const homePageExperiences: ExperienceData = [
   {
     title: 'Home Page Display',
     projects: [
-      {
-        text: 'Software Engineering Intern',
-        duration: 'Jan 2026 – Apr. 2026',
-        description: 'Engineered OAMP (Operations, Administration, Maintenance, Provisioning) features for the flagship 6500 optical networking product targeting VxWorks and Linux kernels in C++, XML, and Python',
-        icon: 'i-ri-price-tag-3-fill',
-        skills: ['i-devicon-c', 'i-devicon-xml', 'i-devicon-python'],
-        image: '/projects/ciena.png',
-        href: 'https://www.ciena.com/',
-      },
-      {
-        text: 'Persona 3 DS',
-        duration: 'Feb. 2026 – Present',
-        description: 'A demake of Persona 3 (based on Persona 3 FES) for the Nintendo DS built using the devkitpro toolchain with a custom C++ game engine',
-        icon: 'i-carbon-game-console',
-        skills: ['i-devicon-cplusplus', 'i-devicon-python'],
-        image: '/projects/persona3ds.png',
-        href: 'https://github.com/TheBossT910/persona-3-ds/tree/main',
-      },
+      experienceData[0].projects[0], // work experience, Ciena
+      experienceData[2].projects[0], // personal, Persona DS
     ],
   },
 ]
