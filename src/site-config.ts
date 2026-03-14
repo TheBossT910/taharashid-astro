@@ -71,20 +71,12 @@ export const siteConfig = {
   footer: {
     navLinks: [
       {
-        text: 'Posts Props',
-        href: '/posts-props',
-      },
-      {
-        text: 'Markdown Style',
-        href: '/md-style',
-      },
-      {
         text: 'GitHub Repository',
         href: 'https://github.com/TheBossT910/taharashid-astro',
       },
       {
         text: 'Resume',
-        href: 'https://drive.google.com/file/d/1FCsYfRcowe-pSCqB76E0Ow05BtVqel43/view?usp=sharing',
+        href: '/resume',
       },
     ],
   },
