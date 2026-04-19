@@ -66,6 +66,10 @@ export const siteConfig = {
         text: 'SavePoint',
         href: '/blog/savepointdevlogs',
       },
+      {
+        text: 'Persona 3 Dual',
+        href: '/blog/persona3dualdevlogs',
+      },
     ],
   },
   footer: {
