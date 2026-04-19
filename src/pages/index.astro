@@ -23,16 +23,16 @@ const posts = await getPosts(path)
 
     <p>
       I’m currently doing a co-op at
-      <a href="https://www.ciena.com/">Ciena</a>, doing embedded software on their 6500 optical networking platform
-      writing C and XML, automating Python test pipelines against real hardware, and targeting VxWorks/Linux kernels.
+      <a href="https://www.ciena.com/">Ciena</a>, developing embedded software on their 6500 optical networking platform
+      with C, Python, and XML.
     </p>
 
     <p>Here's what I've been doing lately:</p>
     <ul>
       <li>
         Currently building
-        <a href="https://github.com/TheBossT910/persona-3-ds">Persona 3 DS</a>, a Nintendo DS game engine demake of
-        Persona 3 FES in C++ targeting ARM9 hardware.
+        <a href="https://github.com/TheBossT910/persona-3-ds">Persona 3 Dual</a>, a Nintendo DS game engine demake of
+        Persona 3 in C++ targeting ARM9 hardware.
       </li>
       <li>
         Previously worked on
@@ -48,31 +48,13 @@ const posts = await getPosts(path)
     </ul>
 
     <p>
-      I'm especially interested in embedded systems for automotive, silicon, and XR. Think firmware, drivers, motor
-      controllers, and low-level software like compatibility layers (think Rosetta, Proton) that power real hardware at
-      scale. The kind of work that makes ARM silicon and VR headsets actually tick.
-    </p>
-    <p>
-      I'm a big fan of VR too, and a fan of the companies pushing the boundaries of immersive hardware and software
-      experiences (looking at you Meta & Valve 👀).
+      I'm especially interested in embedded systems and firmware for silicon, automotive, and XR. Think low-level
+      software like compatibility layers (Rosetta, Proton, FEX) that enables cool tech!
     </p>
 
-    <p>I'm seeking Fall 2026 co-op roles based in Ottawa/Toronto, and open to relocating anywhere in the US</p>
-    <small>(4 or 12 months)</small>
+    <p>Looking for Fall 2026 co-op roles based in Ottawa/Toronto, and open to relocating anywhere in the US</p>
+    <small>(4-12 months)</small>
   </article>
-
-  <hr class="hr-line" />
-
-  <!-- Latest devlog and post -->
-  <div>
-    <h1 class="text-title">Latest Posts</h1>
-    <ListPosts
-      client:visible
-      list={[posts.filter((p) => p.id.includes('talks/post-'))[0]].concat([
-        posts.filter((p) => p.id.includes('devlogs'))[0],
-      ])}
-    />
-  </div>
 
   <hr class="hr-line" />
 
@@ -83,6 +65,19 @@ const posts = await getPosts(path)
     <div mb-8 sm:mb-12>
       {(<ListProjects client:visible list={homePageExperiences[0].projects} />)}
     </div>
+  </div>
+
+  <hr class="hr-line" />
+
+  <div>
+    <!-- Latest devlog and post -->
+    <h1 class="text-title">Latest Posts</h1>
+    <ListPosts
+      client:visible
+      list={[posts.filter((p) => p.id.includes('talks/post-'))[0]].concat([
+        posts.filter((p) => p.id.includes('devlogs'))[0],
+      ])}
+    />
 
     <img
       src="https://github-readme-activity-graph.vercel.app/graph?username=TheBossT910&theme=github-compact"

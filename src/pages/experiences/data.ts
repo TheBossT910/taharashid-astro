@@ -7,9 +7,9 @@ export const experienceData: ExperienceData = [
       {
         text: 'Software Engineering Intern',
         duration: 'Jan 2026 – Apr. 2026',
-        description: 'Engineered OAMP (Operations, Administration, Maintenance, Provisioning) features for the flagship 6500 optical networking product targeting VxWorks and Linux kernels in C++, XML, and Python',
+        description: 'Developed and shipped embedded firmware in C for the flagship 6500 optical networking platform, targeting both VxWorks RTOS and Linux kernels',
         icon: 'i-ri-price-tag-3-fill',
-        skills: ['i-devicon-c', 'i-devicon-xml', 'i-devicon-python'],
+        skills: ['i-devicon-c', 'i-devicon-python', 'i-devicon-xml'],
         image: '/projects/ciena.png',
         href: 'https://www.ciena.com/',
       },
@@ -42,7 +42,7 @@ export const experienceData: ExperienceData = [
     title: 'Personal',
     projects: [
       {
-        text: 'Persona 3 DS',
+        text: 'Persona 3 Dual',
         duration: 'Feb. 2026 – Present',
         description: 'A demake of Persona 3 (based on Persona 3 FES) for the Nintendo DS built using the devkitpro toolchain with a custom C++ game engine',
         icon: 'i-carbon-game-console',
