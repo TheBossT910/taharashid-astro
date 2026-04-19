@@ -1,7 +1,7 @@
 ---
 title: "SavePoint, done!"
 description: "SavePoint's first phase has been completed, and is out now!"
-date: 2025-12-13
+date: 2025-12-16
 image:
     src: "/blog/talks/post-17/thumbnail.png"
     alt: "Homepage"
