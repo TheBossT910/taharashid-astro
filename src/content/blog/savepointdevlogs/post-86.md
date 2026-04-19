@@ -25,6 +25,10 @@ date: 2026-01-28
     - Separate button to edit and delete
 - Make the view and edit into modals
 
+<img src="/blog/savepointdevlogs/post-86/example1.png" alt="example image 1" style="max-height: 800px; width: auto">
+
+<img src="/blog/savepointdevlogs/post-86/example2.png" alt="example image 2" style="max-height: 800px; width: auto">
+
 - Functionality
     - Create, update, delete inventory
     - View inventory
@@ -75,5 +79,7 @@ date: 2026-01-28
 ---
 
 **Dashboard**
+
+<img src="/blog/savepointdevlogs/post-86/example3.png" alt="example image 3" style="max-height: 800px; width: auto">
 
 - Display total earnings, sales, customers, average order value, top selling products, chart for monthly profit, recent orders
