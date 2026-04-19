@@ -1,6 +1,6 @@
 ---
-title: "SavePoint, done!"
-description: "SavePoint's first phase has been completed, and is out now!"
+title: "SavePoint, Phase 2 complete!"
+description: "SavePoint's second phase has been completed, and is out now!"
 date: 2026-1-11
 image:
     src: "/blog/talks/post-18/detail.png"
