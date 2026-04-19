@@ -15,3 +15,5 @@ date: 2026-04-17
     - Create a demo with working **NitroFS**
     - Update music demo to use **NitroFS**
     - Research **MP3 vs .WAV** (are we using up CPU cycles?!)
+
+<img src="/blog/persona3dualdevlogs/post-29/title.png" alt="screenshot of title screen" style="max-height: 400px; width: auto">

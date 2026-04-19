@@ -18,6 +18,9 @@ date: 2026-02-22
     - `D4e4f8` (bg)
 - I finally created the **rotating background**, and it looks pretty good!
     - I used a sinusoidal fn to make it rotate at different speeds/directions
+
+<img src="/blog/persona3dualdevlogs/post-8/home.png" alt="screenshot of DS screen home" style="max-height: 400px; width: auto">
+
 - I think I'm going to make the **next screen** (after we click "Press Any Button")
     - I'm going to start gathering the textures for that and format it
 - I just deleted the old GitHub repo and made a new repo called `persona-3-ds`
@@ -37,3 +40,5 @@ date: 2026-02-22
 - I got the basic menu view down, there are just a few other things to do
     - When the silhouette moves in, there is garbage data beyond the 512x512 area. Somehow, we should clear the memory and fix that!
     - Need to make the menu dialogs and options on the 2nd screen
+
+<img src="/blog/persona3dualdevlogs/post-8/menu.png" alt="screenshot of DS screen menu" style="max-height: 400px; width: auto">

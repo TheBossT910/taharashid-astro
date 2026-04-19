@@ -17,3 +17,5 @@ date: 2026-03-10
     - Save points
     - Talk to characters
 - This 3D area is my **debug zone** for now!
+
+<img src="/blog/persona3dualdevlogs/post-20/dorm.png" alt="screenshot of dorm screen" style="max-height: 400px; width: auto">

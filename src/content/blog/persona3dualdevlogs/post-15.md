@@ -16,3 +16,5 @@ date: 2026-03-01
     - Physics (stick to the ground, collision on items)
     - Interaction with items (ex. computer on reception desk, door)
 - After this, I will try to create proper textures/load textures from actual assets
+
+<img src="/blog/persona3dualdevlogs/post-15/dorm.png" alt="screenshot of dorm screen" style="max-height: 400px; width: auto">

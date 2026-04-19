@@ -15,3 +15,5 @@ date: 2026-02-28
     - It is also planned that when you move the camera, it's fine if you see the black background world (for now)
 - I want to get the **room's scaling right** before I start adding some basic detail
     - Then, I can start adding other 3D objects, and proper textures
+
+<img src="/blog/persona3dualdevlogs/post-14/dorm.png" alt="screenshot of dorm screen" style="max-height: 400px; width: auto">
