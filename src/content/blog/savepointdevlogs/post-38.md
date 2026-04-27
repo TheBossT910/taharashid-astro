@@ -8,9 +8,7 @@ date: 2025-7-19
 
 - I changed up the theme a little bit and updated the main product card (see video)
 
-<video width="100%" controls>
-  <source src="https://dl.dropboxusercontent.com/scl/fi/u89yb77yt8hijthmuzubw/site-theme.mov?rlkey=w4fnzdnnkmssyukxdwbuvcpi1&st=g2jdzbx3" type="video/mp4">
-</video>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/DWE4MtlTy7E?autoplay=1&mute=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <img src="/blog/savepointdevlogs/post-38/figma-components.png" alt="figma components" style="max-height: 800px; width: auto">
 

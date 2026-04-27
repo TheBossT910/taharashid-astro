@@ -13,9 +13,7 @@ date: 2025-7-18
 - I want to kind of ignore connecting the backend at the moment. I made it a while ago, and the database structure may not match what I want it to do.
 - Looks pretty nice at the moment. Also created a theme for the site (see video, it was actually at July 19 since I stayed up late)
 
-<video width="100%" controls>
-  <source src="https://dl.dropboxusercontent.com/scl/fi/8ox6g5j8nv5mtfnr9zw1d/site-theme.mov?rlkey=rxcfobpkas9frqsgg3qwd6f8j&st=ab3yb4ch" type="video/mp4">
-</video>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/RjXXKX5slV4?autoplay=1&mute=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <img src="/blog/savepointdevlogs/post-37/details.png" alt="details top" style="max-height: 800px; width: auto">
 
