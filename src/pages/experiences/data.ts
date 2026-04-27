@@ -48,14 +48,14 @@ export const experienceData: ExperienceData = [
         skills: ['i-devicon-vuejs', 'i-devicon-javascript', 'i-devicon-python'],
         image: '/projects/mas.png',
         href: 'https://devpost.com/software/uottahack-8',
-        hrefLabel: 'View on Devpost →',
+        hrefLabel: 'Devpost →',
         longDescription: `An AI multi-agent financial investment advisor and dashboard powered by Solace Agent Mesh to deliver intelligent investment strategies and stock market analysis.\n\nBuilt to make investing accessible, MAFIA pairs a Nuxt/Vue frontend with a Solace SAM backend. Under the hood, a multi-agent system scrapes market data, runs sentiment analysis, and generates headless matplotlib charts.\n\nEverything is wired via JSON-RPC and SSE for a snappy, real-time streaming experience without server lag.`,
         links: [
           { label: 'Backend', href: 'https://github.com/yaoruixuu/SolaceAgentMesh' },
           { label: 'Frontend', href: 'https://github.com/Tony-octopus/UOttaHack8' },
         ],
         media: [
-          { type: 'youtube', src: 'dArFxOMV13A', caption: 'Demo video (created by teammate Yaorui Xu)', isPrimary: false },
+          { type: 'youtube', src: 'dArFxOMV13A', caption: 'Demo video (created by teammate Yaorui Xu)', isPrimary: true },
         ],
       },
     ],
@@ -84,14 +84,14 @@ export const experienceData: ExperienceData = [
         ],
       },
       {
-        text: 'SavePoint - The Modern Game Collection Platform',
+        text: 'SavePoint - Game Collection Platform',
         duration: 'Apr. 2025 – Feb. 2026',
         description: 'A web-first app built to modernize how people and businesses collect and manage video games.',
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-microsoftsqlserver-wordmark', 'i-devicon-figma', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint/main.png',
         href: 'https://www.savepoint.ca/',
-        hrefLabel: 'savepoint.ca →',
+        hrefLabel: 'SavePoint.ca →',
         longDescription: `A web-first platform built to modernize how people and businesses collect and manage video games.\n\nI built SavePoint using Nuxt 3, ASP.NET Core, and MS SQL to bridge the gap between game collectors and local retro stores. For gamers, it’s a hub for barcode scanning, collection tracking, and real-time market valuations.\n\nFor stores stuck using spreadsheets, it was intended to be a modern inventory system that pulls data from IGDB and syncs directly to external marketplaces like eBay and Shopify.\n\nNote that only the consumer side was built and the store side was not.`,
         links: [
           { label: 'Frontend', href: 'https://github.com/TheBossT910/savepoint-web' },
@@ -99,6 +99,7 @@ export const experienceData: ExperienceData = [
           { label: 'Figma', href: 'https://www.figma.com/design/W2BOFipWLVwZbBskBtIcsh/SavePoint-Web--June-2025-?node-id=18-1951&t=cD7cN1p2i11uqFVa-1' },
         ],
         media: [
+          { type: 'iframe', src: 'https://www.savepoint.ca/', caption: '', isPrimary: true },
           { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'Website demo', isPrimary: false },
           { type: 'image', src: '/projects/savepoint/account.png', caption: 'User account page', isPrimary: false },
           { type: 'image', src: '/projects/savepoint/detail.png', caption: 'Game detail page', isPrimary: false },
@@ -175,6 +176,9 @@ export const experienceData: ExperienceData = [
         image: '/projects/ankiplugin.png',
         href: 'https://github.com/TheBossT910/Japanese-Verb-Transivity-Anki-Plugin',
         hrefLabel: 'GitHub →',
+        media: [
+          { type: 'iframe', src: 'https://www.dropbox.com/scl/fi/lch7dz0cgbll0dimhbolt/Anki.pdf?rlkey=8ycb4ghsdvelkg426ykmbicu3&st=p6lqyf2f&raw=1', caption: '', isPrimary: true },
+        ],
       },
     ],
   },
@@ -195,9 +199,11 @@ export const experienceData: ExperienceData = [
           { label: 'Website', href: 'https://enableworks.framer.website/' },
         ],
         media: [
+          { type: 'iframe', src: 'https://enableworks.framer.website/', caption: '', isPrimary: true },
           { type: 'image', src: '/projects/capella/full_system.jpeg', caption: 'Full system', isPrimary: false },
-          { type: 'image', src: '/projects/capella/product.jpeg', caption: 'Product', isPrimary: true },
+          { type: 'image', src: '/projects/capella/product.jpeg', caption: 'Product', isPrimary: false },
           { type: 'image', src: '/projects/capella/award.jpeg', caption: '1st place award', isPrimary: false },
+          { type: 'iframe', src: 'https://www.dropbox.com/scl/fi/wd8mxlh1j355sb5sj1jxz/Capella.pdf?rlkey=4tlws23g83vaiyfj31k532r4h&st=jptp55m8&raw=1', caption: '', isPrimary: true },
           { type: 'image', src: '/projects/capella/grip.jpeg', caption: 'Grip', isPrimary: false },
           { type: 'image', src: '/projects/capella/swappable_heads.jpeg', caption: 'Swappable heads demo', isPrimary: false },
           { type: 'image', src: '/projects/capella/system_with_thandle.jpeg', caption: 'System with T-Handle', isPrimary: false },
@@ -215,6 +221,9 @@ export const experienceData: ExperienceData = [
         hrefLabel: 'Live Site →',
         links: [
           { label: 'GitHub', href: 'https://github.com/seg-perfect-fit/perfect-fit-site' },
+        ],
+        media: [
+          { type: 'iframe', src: 'https://seg-perfect-fit.github.io/perfect-fit-site/', caption: '', isPrimary: true },
         ],
       },
     ],

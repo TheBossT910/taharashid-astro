@@ -2,7 +2,7 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 
 interface ProjectMedia {
-  type: 'image' | 'video' | 'youtube'
+  type: 'image' | 'video' | 'youtube' | 'iframe'
   src: string
   caption?: string
   isPrimary?: boolean
@@ -29,7 +29,7 @@ interface Project {
 
 defineProps<{ list: Project[] }>()
 
-// ── Modal state ──────────────────────────────────────────────────────────────
+//  Modal state
 const activeProject = ref<Project | null>(null)
 const activeMediaIndex = ref(0)
 const modalEl = ref<HTMLElement | null>(null)
@@ -105,7 +105,7 @@ watch(activeProject, () => {
 </script>
 
 <template>
-  <!-- ── Project Grid ──────────────────────────────────────────────────────── -->
+  <!--  Project Grid  -->
   <ul grid="~ cols-1 sm:cols-2 gap-4">
     <template v-if="!list || list.length === 0">
       <div py10 opacity-50 text-lg>
@@ -172,7 +172,7 @@ watch(activeProject, () => {
     </li>
   </ul>
 
-  <!-- ── Modal ─────────────────────────────────────────────────────────────── -->
+  <!--  Modal  -->
   <Teleport to="body">
     <Transition name="modal-fade">
       <div
@@ -200,12 +200,13 @@ watch(activeProject, () => {
 
           <!-- Scrollable content -->
           <div class="modal-body">
-            <!-- ── Hero / Primary media ──────────────────────────────────── -->
+            <!--  Hero / Primary media  -->
             <div class="modal-hero">
               <template v-if="allMedia[activeMediaIndex]?.type === 'youtube'">
                 <iframe
                   :src="ytEmbedUrl(allMedia[activeMediaIndex].src)"
                   class="modal-hero-media"
+                  style="width: 100%; aspect-ratio: 16/9; background: #fff;"
                   frameborder="0"
                   allowfullscreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -215,8 +216,20 @@ watch(activeProject, () => {
                 <video
                   :src="allMedia[activeMediaIndex].src"
                   class="modal-hero-media"
+                  style="width: 100%; aspect-ratio: 16/9; background: #fff;"
                   controls
                   playsinline
+                />
+              </template>
+              <template v-else-if="allMedia[activeMediaIndex]?.type === 'iframe'">
+                <iframe
+                  :src="allMedia[activeMediaIndex].src"
+                  class="modal-hero-media"
+                  style="width: 100%; aspect-ratio: 16/9; background: #fff;"
+                  frameborder="0"
+                  allowfullscreen="true"
+                  mozallowfullscreen="true"
+                  webkitallowfullscreen="true"
                 />
               </template>
               <template v-else>
@@ -243,7 +256,7 @@ watch(activeProject, () => {
               </template>
             </div>
 
-            <!-- ── Thumbnail strip ─────────────────────────────────────── -->
+            <!--  Thumbnail strip  -->
             <div v-if="allMedia.length > 1" class="modal-thumbs">
               <button
                 v-for="(m, idx) in allMedia"
@@ -265,13 +278,18 @@ watch(activeProject, () => {
                     <i class="i-carbon-play-filled-alt text-2xl" />
                   </div>
                 </template>
+                <template v-else-if="m.type === 'iframe'">
+                  <div class="thumb-video-placeholder bg-gray-100 dark:bg-zinc-800/80">
+                    <i class="i-carbon-code text-2xl text-gray-500 dark:text-gray-400" />
+                  </div>
+                </template>
                 <template v-else>
                   <img :src="m.src" alt="" class="w-full h-full object-cover">
                 </template>
               </button>
             </div>
 
-            <!-- ── Project info ────────────────────────────────────────── -->
+            <!--  Project info  -->
             <div class="modal-info">
               <!-- Header row -->
               <div class="modal-info-header">
@@ -345,7 +363,7 @@ watch(activeProject, () => {
 </template>
 
 <style scoped>
-/* ── Overlay ────────────────────────────────────────────────────────────── */
+/*  Overlay  */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -370,7 +388,7 @@ watch(activeProject, () => {
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* ── Panel ──────────────────────────────────────────────────────────────── */
+/*  Panel  */
 .modal-panel {
   position: relative;
   width: 100%;
@@ -403,7 +421,7 @@ watch(activeProject, () => {
     0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* ── Close button ───────────────────────────────────────────────────────── */
+/*  Close button  */
 .modal-close {
   position: absolute;
   top: 12px;
@@ -436,14 +454,14 @@ watch(activeProject, () => {
   background: rgba(60, 60, 60, 1);
 }
 
-/* ── Scrollable body ────────────────────────────────────────────────────── */
+/*  Scrollable body  */
 .modal-body {
   overflow-y: auto;
   max-height: 90vh;
   scrollbar-width: thin;
 }
 
-/* ── Hero ───────────────────────────────────────────────────────────────── */
+/*  Hero  */
 .modal-hero {
   position: relative;
   width: 100%;
@@ -502,7 +520,7 @@ watch(activeProject, () => {
   right: 10px;
 }
 
-/* ── Thumbnail strip ────────────────────────────────────────────────────── */
+/*  Thumbnail strip  */
 .modal-thumbs {
   display: flex;
   gap: 8px;
@@ -554,7 +572,7 @@ watch(activeProject, () => {
   font-size: 1.2rem;
 }
 
-/* ── Info block ─────────────────────────────────────────────────────────── */
+/*  Info block  */
 .modal-info {
   padding: 20px 20px 28px;
 }
@@ -641,7 +659,7 @@ watch(activeProject, () => {
   background: rgba(255, 255, 255, 0.14);
 }
 
-/* ── Transition fallback (Teleport) ─────────────────────────────────────── */
+/*  Transition fallback (Teleport)  */
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: opacity 0.22s ease;

@@ -9,7 +9,7 @@ export type Pages = 'pages'
 export type CollectionPages = CollectionEntry<Pages>
 
 export interface ProjectMedia {
-  type: 'image' | 'video' | 'youtube'
+  type: 'image' | 'video' | 'youtube' | 'iframe'
   src: string // URL or YouTube video ID
   caption?: string
   isPrimary?: boolean // marks the hero/main media
