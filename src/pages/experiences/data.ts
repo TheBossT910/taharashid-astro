@@ -1,5 +1,25 @@
 import type { ExperienceData } from '@/types'
 
+// ─────────────────────────────────────────────────────────────────────────────
+// New optional fields available on every project:
+//
+//   longDescription?: string
+//     Shown only in the modal. Supports line breaks via \n.
+//     Falls back to `description` if not provided.
+//
+//   hrefLabel?: string
+//     Label for the primary CTA button. Defaults to "Visit →".
+//
+//   links?: { label: string; href: string }[]
+//     Extra links shown as pill chips in the modal.
+//
+//   media?: { type: 'image'|'video'|'youtube', src: string, caption?: string, isPrimary?: boolean }[]
+//     Additional gallery items shown in the modal.
+//     The card's `image` is always prepended as the first item unless one
+//     entry already has isPrimary: true.
+//     For YouTube, `src` can be a full URL or just the video ID.
+// ─────────────────────────────────────────────────────────────────────────────
+
 export const experienceData: ExperienceData = [
   {
     title: 'Work',
@@ -7,11 +27,19 @@ export const experienceData: ExperienceData = [
       {
         text: 'Software Engineering Intern',
         duration: 'Jan 2026 – Apr. 2026',
-        description: 'Developed and shipped embedded firmware in C for the flagship 6500 optical networking platform, targeting both VxWorks RTOS and Linux kernels',
+        description: 'Developed and shipped embedded firmware in C for the flagship 6500 optical networking platform, targeting both VxWorks RTOS and Linux kernels.',
         icon: 'i-ri-price-tag-3-fill',
         skills: ['i-devicon-c', 'i-devicon-python', 'i-devicon-xml'],
-        image: '/projects/ciena.png',
+        image: '/projects/ciena/main.png',
         href: 'https://www.ciena.com/',
+        hrefLabel: 'Ciena.com →',
+        longDescription: `Developed and shipped embedded firmware in C for the flagship 6500 optical networking platform, targeting both VxWorks RTOS and Linux kernels.\n\nBeyond shipping new features, a major focus was tackling technical debt. By refactoring legacy code and optimizing data structures, execution complexity and stack memory usage were drastically reduced.\n\nTo keep everything running reliably, over 60 automated Python tests were built and validated against physical hardware via Jenkins CI/CD.`,
+        links: [
+          { label: 'Ciena 6500 Platform', href: 'https://www.ciena.com/products/6500' },
+        ],
+        media: [
+          { type: 'image', src: '/projects/ciena/taha.jpg', caption: 'My photo outside the main building' },
+        ],
       },
       {
         text: 'Software Engineering Intern',
@@ -19,8 +47,13 @@ export const experienceData: ExperienceData = [
         description: 'Worked on an internal admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries with Vue and .NET.',
         icon: 'i-ri-price-tag-3-fill',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-bootstrap', 'i-devicon-typescript', 'i-devicon-sass'],
-        image: '/projects/oliverslabels.jpeg',
+        image: '/projects/oliverslabels/main.jpeg',
         href: 'https://www.oliverslabels.com/',
+        hrefLabel: 'OliversLabels.com →',
+        longDescription: `Worked on an internal Vue and .NET admin platform used to manage customer orders, accounts, design assets, and Amazon/Zazzle listings across OliversLabels.com and its subsidiaries.\n\nBuilt a custom Azure Blob Viewer that cut search times for 10,000+ assets from 25 seconds down to under a second.\n\nAlso engineered a real-time sync and edit interface for over 14,000 Amazon listings using SignalR, and rolled out a responsive, site-wide theme update across 47+ pages.`,
+        media: [
+          { type: 'image', src: '/projects/oliverslabels/taha.jpeg', caption: 'Team photo' },
+        ],
       },
     ],
   },
@@ -30,11 +63,20 @@ export const experienceData: ExperienceData = [
       {
         text: 'Market Analysis System (MAS)',
         duration: 'Jan. 2026',
-        description: 'An AI multi-agent financial investment advisor and dashboard powered by Solace Agent Mesh to deliver intellegent investment stratigies and stock market analysis',
+        description: 'An AI multi-agent financial investment advisor and dashboard powered by Solace Agent Mesh to deliver intelligent investment strategies and stock market analysis.',
         icon: 'i-ph-laptop',
         skills: ['i-devicon-vuejs', 'i-devicon-javascript', 'i-devicon-python'],
         image: '/projects/mas.png',
         href: 'https://devpost.com/software/uottahack-8',
+        hrefLabel: 'View on Devpost →',
+        longDescription: `An AI multi-agent financial investment advisor and dashboard powered by Solace Agent Mesh to deliver intelligent investment strategies and stock market analysis.\n\nBuilt to make investing accessible, MAFIA pairs a Nuxt/Vue frontend with a Solace SAM backend. Under the hood, a multi-agent system scrapes market data, runs sentiment analysis, and generates headless matplotlib charts.\n\nEverything is wired via JSON-RPC and SSE for a snappy, real-time streaming experience without server lag.`,
+        links: [
+          { label: 'Backend', href: 'https://github.com/yaoruixuu/SolaceAgentMesh' },
+          { label: 'Frontend', href: 'https://github.com/Tony-octopus/UOttaHack8' },
+        ],
+        media: [
+          { type: 'youtube', src: 'dArFxOMV13A', caption: 'Demo video (created by teammate Yaorui Xu)', isPrimary: false },
+        ],
       },
     ],
   },
@@ -44,11 +86,22 @@ export const experienceData: ExperienceData = [
       {
         text: 'Persona 3 Dual',
         duration: 'Feb. 2026 – Present',
-        description: 'A demake of Persona 3 (based on Persona 3 FES) for the Nintendo DS built using the devkitpro toolchain with a custom C++ game engine',
+        description: 'A demake of Persona 3 for the Nintendo DS built using the devkitpro toolchain with a custom C++ game engine.',
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-cplusplus', 'i-devicon-python'],
-        image: '/projects/persona3ds.png',
+        image: '/projects/persona3dual/main.png',
         href: 'https://github.com/TheBossT910/persona-3-ds/tree/main',
+        hrefLabel: 'GitHub →',
+        longDescription: `A demake of Persona 3 for the Nintendo DS built using the devkitpro toolchain with a custom C++ game engine.\n\nBuilding an engine from scratch for the ARM9 processor meant writing a fixed-function 3D renderer and a 2D collision system. Since DS memory is incredibly tight, I manually allocated VRAM banks to juggle 3D textures and 2D layers without corruption.\n\nI also developed custom Python tools for 3D model conversion and engineered MP3 and video streaming via NitroFS.`,
+        links: [
+          { label: 'GitHub', href: 'https://github.com/TheBossT910/persona-3-dual' },
+        ],
+        media: [
+          { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'Gameplay demo', isPrimary: false },
+          { type: 'image', src: '/projects/persona3dual/hw.jpeg', caption: 'Running on real NDS hardware', isPrimary: false },
+          { type: 'image', src: '/projects/persona3dual/level.jpeg', caption: 'Example level', isPrimary: false },
+          { type: 'image', src: '/projects/persona3dual/menu.jpeg', caption: 'Menu', isPrimary: false },
+        ],
       },
       {
         text: 'SavePoint - The Modern Game Collection Platform',
@@ -56,35 +109,92 @@ export const experienceData: ExperienceData = [
         description: 'A web-first app built to modernize how people and businesses collect and manage video games.',
         icon: 'i-carbon-game-console',
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-microsoftsqlserver-wordmark', 'i-devicon-figma', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
-        image: '/projects/savepoint.png',
+        image: '/projects/savepoint/main.png',
         href: 'https://www.savepoint.ca/',
+        hrefLabel: 'savepoint.ca →',
+        longDescription: `A web-first platform built to modernize how people and businesses collect and manage video games.\n\nI built SavePoint using Nuxt 3, ASP.NET Core, and MS SQL to bridge the gap between game collectors and local retro stores. For gamers, it’s a hub for barcode scanning, collection tracking, and real-time market valuations.\n\nFor stores stuck using spreadsheets, it was intended to be a modern inventory system that pulls data from IGDB and syncs directly to external marketplaces like eBay and Shopify.\n\nNote that only the consumer side was built and the store side was not.`,
+        links: [
+          { label: 'Frontend', href: 'https://github.com/TheBossT910/savepoint-web' },
+          { label: 'Backend', href: 'https://github.com/TheBossT910/savepoint-api-dotnet' },
+          { label: 'Figma', href: 'https://www.figma.com/design/W2BOFipWLVwZbBskBtIcsh/SavePoint-Web--June-2025-?node-id=18-1951&t=cD7cN1p2i11uqFVa-1' },
+        ],
+        media: [
+          { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'Website demo', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/account.png', caption: 'User account page', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/detail.png', caption: 'Game detail page', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/featured.png', caption: 'Featured games highlight', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/games.png', caption: 'All games page', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/home.png', caption: 'Home page', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/preview_game.png', caption: 'Game preview', isPrimary: false },
+          { type: 'image', src: '/projects/savepoint/search.png', caption: 'Search pop-up', isPrimary: false },
+        ],
       },
       {
         text: 'Koyomi - AnimeTracker',
-        duration: 'Oct. 2024 – Mar. 20255',
+        duration: 'Oct. 2024 – Mar. 2025',
         description: 'A simple iOS app to help you track anime you\'re watching or planning to watch.',
         icon: 'i-ri-app-store-fill',
         skills: ['i-devicon-swift', 'i-devicon-firebase', 'i-devicon-figma', 'i-devicon-python'],
-        image: '/projects/koyomi.jpeg',
+        image: '/projects/koyomi/main.jpeg',
         href: 'https://github.com/TheBossT910/AnimeTracker',
+        hrefLabel: 'GitHub →',
+        longDescription: `A native iOS app built with Swift and SwiftUI to track weekly anime release schedules and manage watchlists.\n\nI migrated the app's data management from local JSON to Firebase, utilizing Swift async/await to improve database querying times by over 93%. Under the hood, a Python backend uses asyncio to efficiently fetch data for 900+ shows from TVDB and AniList.\n\nIt also features a local AI integration using Mistral and Ollama to generate smart, on-demand episode recaps!`,
+        links: [
+          { label: 'Backend (Data Parser)', href: 'https://github.com/TheBossT910/AnimeTracker---Data-Parser' },
+          { label: 'Figma', href: 'https://www.figma.com/design/qMhX9zJUcBe4BkF2iaLHUK/AnimeTracker--Feb-2025-?node-id=0-1&t=T4QJsan2NUW9nelo-1' },
+        ],
+        media: [
+          { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'App demo', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/macos/list.png', caption: 'List (MacOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/macos/list_with_fav.png', caption: 'List with Favourites (MacOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/macos/schedule_1.png', caption: 'Schedule (MacOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/macos/schedule_2.png', caption: 'Schedule (MacOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/macos/account.png', caption: 'Account (MacOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/ios/home.png', caption: 'Home (iOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/ios/list.png', caption: 'List (iOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/ios/schedule_1.png', caption: 'Schedule (iOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/ios/schedule_2.png', caption: 'Schedule (iOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/ios/logged_in.png', caption: 'Account (iOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/ios/sign_in.png', caption: 'Account (iOS)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/home.png', caption: 'Home (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/info_desc.png', caption: 'Info (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/info_ep.png', caption: 'Info (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/info_more.png', caption: 'Info (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/lists.png', caption: 'Lists (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/reels.png', caption: 'Reels (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/schedule.png', caption: 'Schedule (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/search_1.png', caption: 'Search (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/search_2.png', caption: 'Search Alt (Figma)', isPrimary: false },
+          { type: 'image', src: '/projects/koyomi/figma/user.png', caption: 'Account (Figma)', isPrimary: false },
+        ],
       },
       {
         text: 'SyncSlash - 2D Hack n Slash Sidescroller',
         duration: 'Dec. 2024',
-        description: 'A fast-paced 2D hack n slash sidescroller game currently on hiatus, developed with Unity.',
+        description: 'A fast-paced 2D hack n slash sidescroller game developed with Unity.',
         icon: 'i-simple-icons-unity',
         skills: ['i-devicon-unity', 'i-devicon-csharp'],
-        image: '/projects/syncslash.jpeg',
+        image: '/projects/syncslash/main.jpeg',
         href: 'https://github.com/TheBossT910/SlashSync/tree/main',
+        hrefLabel: 'GitHub →',
+        longDescription: `A fast-paced 2D hack-and-slash sidescroller built in Unity, designed around intense combat and chasing high scores.\n\nThe core loop features a real-time character swap mechanic, letting players seamlessly switch between three unique fighters on the fly to adapt to challenges and unleash ultimate "Smash" moves.\n\nThe game's standout feature is a dynamic audio-sync system where the level's music actively impacts enemy behavior, player abilities, and environmental hazards as you play.\n\nNote that only the player swap mechanic was developed before the project was stopped.`,
+        media: [
+          { type: 'image', src: '/projects/syncslash/player.png', caption: 'Player', isPrimary: false },
+          { type: 'image', src: '/projects/syncslash/swap_1.png', caption: 'Swap (character 1)', isPrimary: false },
+          { type: 'image', src: '/projects/syncslash/swap_2.png', caption: 'Swap (character 2)', isPrimary: false },
+          { type: 'image', src: '/projects/syncslash/swap_3.png', caption: 'Swap (character 3)', isPrimary: false },
+          { type: 'image', src: '/projects/syncslash/world.png', caption: 'Level', isPrimary: false },
+        ],
       },
       {
-        text: 'Anki Plugin for Japanese Verb Transivity',
+        text: 'Anki Plugin for Japanese Verb Transitivity',
         duration: 'May 2024 – Jun. 2024',
-        description: 'An Anki plugin to parse cards and append the transivity of verbs as "Self-Move" (intransitive) or "Other-Move" (transitive) to thousands of flashcards.',
+        description: 'An Anki plugin to parse cards and append the transitivity of verbs as "Self-Move" (intransitive) or "Other-Move" (transitive) to thousands of flashcards.',
         icon: 'i-simple-icons-anki',
         skills: ['i-devicon-python'],
         image: '/projects/ankiplugin.png',
         href: 'https://github.com/TheBossT910/Japanese-Verb-Transivity-Anki-Plugin',
+        hrefLabel: 'GitHub →',
       },
     ],
   },
@@ -92,13 +202,40 @@ export const experienceData: ExperienceData = [
     title: 'University',
     projects: [
       {
+        text: 'Capella System',
+        duration: 'Sept. 2025 – Dec. 2025',
+        description: 'An award-winning modular assistive device designed to help individuals with limited dexterity easily open various caps and lids with ease.',
+        icon: 'i-ri-hand-heart-fill',
+        skills: ['Product Design', 'Prototyping', 'Framer', 'Client Management'],
+        image: '/projects/capella/main.jpeg',
+        href: 'https://enableworks.framer.website/',
+        hrefLabel: 'Live Site →',
+        longDescription: `The Capella System is a modular assistive device engineered to help individuals with limited dexterity open caps and jars. It features an ergonomic grip and a magnetic sliding T-Handle to shift the workload from weak finger joints to the forearm.\n\nWe designed swappable magnetic cones to fit different sized items, keeping the final tool at just 57 grams and fully drop-proof. I led client meetings and built the project's website, helping us win 1st place in the Accessibility category at uOttawa's Design Day!`,
+        links: [
+          { label: 'Website', href: 'https://enableworks.framer.website/' },
+        ],
+        media: [
+          { type: 'image', src: '/projects/capella/full_system.jpeg', caption: 'Full system', isPrimary: false },
+          { type: 'image', src: '/projects/capella/product.jpeg', caption: 'Product', isPrimary: true },
+          { type: 'image', src: '/projects/capella/award.jpeg', caption: '1st place award', isPrimary: false },
+          { type: 'image', src: '/projects/capella/grip.jpeg', caption: 'Grip', isPrimary: false },
+          { type: 'image', src: '/projects/capella/swappable_heads.jpeg', caption: 'Swappable heads demo', isPrimary: false },
+          { type: 'image', src: '/projects/capella/system_with_thandle.jpeg', caption: 'System with T-Handle', isPrimary: false },
+          { type: 'image', src: '/projects/capella/logo.jpeg', caption: 'Logo', isPrimary: false },
+        ],
+      },
+      {
         text: 'PerfectFit',
         duration: 'Sept. 2024 – Nov. 2024',
         description: 'A mockup website for an innovative clothing app designed to revolutionize the shopping experience by providing an engaging, immersive, and elegant platform.',
         icon: 'i-ri-t-shirt-2-fill',
         skills: ['i-devicon-css3', 'i-devicon-html5', 'i-devicon-javascript'],
         image: '/projects/perfectfit.png',
-        href: 'https://github.com/seg-perfect-fit/perfect-fit-site?tab=readme-ov-file',
+        href: 'https://seg-perfect-fit.github.io/perfect-fit-site/',
+        hrefLabel: 'Live Site →',
+        links: [
+          { label: 'GitHub', href: 'https://github.com/seg-perfect-fit/perfect-fit-site' },
+        ],
       },
     ],
   },
