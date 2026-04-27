@@ -8,22 +8,6 @@ export type Pages = 'pages'
 
 export type CollectionPages = CollectionEntry<Pages>
 
-// export type ExperienceData = Array<{
-//   title: string
-//   projects: Array<{
-//     text: string
-//     duration: string
-//     description?: string
-//     icon?: string
-//     skills?: string[]
-//     image: string
-//     href: string
-//   }>
-// }>
-
-// Add these fields to your existing Project type in @/types
-// (merge with whatever your ExperienceData / Project type currently looks like)
-
 export interface ProjectMedia {
   type: 'image' | 'video' | 'youtube'
   src: string // URL or YouTube video ID
