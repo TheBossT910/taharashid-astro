@@ -1,25 +1,5 @@
 import type { ExperienceData } from '@/types'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// New optional fields available on every project:
-//
-//   longDescription?: string
-//     Shown only in the modal. Supports line breaks via \n.
-//     Falls back to `description` if not provided.
-//
-//   hrefLabel?: string
-//     Label for the primary CTA button. Defaults to "Visit →".
-//
-//   links?: { label: string; href: string }[]
-//     Extra links shown as pill chips in the modal.
-//
-//   media?: { type: 'image'|'video'|'youtube', src: string, caption?: string, isPrimary?: boolean }[]
-//     Additional gallery items shown in the modal.
-//     The card's `image` is always prepended as the first item unless one
-//     entry already has isPrimary: true.
-//     For YouTube, `src` can be a full URL or just the video ID.
-// ─────────────────────────────────────────────────────────────────────────────
-
 export const experienceData: ExperienceData = [
   {
     title: 'Work',
