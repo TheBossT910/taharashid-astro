@@ -73,9 +73,6 @@ export const experienceData: ExperienceData = [
         href: 'https://github.com/TheBossT910/persona-3-ds/tree/main',
         hrefLabel: 'GitHub →',
         longDescription: `A demake of Persona 3 for the Nintendo DS built using the devkitpro toolchain with a custom C++ game engine.\n\nBuilding an engine from scratch for the ARM9 processor meant writing a fixed-function 3D renderer and a 2D collision system. Since DS memory is incredibly tight, I manually allocated VRAM banks to juggle 3D textures and 2D layers without corruption.\n\nI also developed custom Python tools for 3D model conversion and engineered MP3 and video streaming via NitroFS.`,
-        links: [
-          { label: 'GitHub', href: 'https://github.com/TheBossT910/persona-3-dual' },
-        ],
         media: [
           { type: 'youtube', src: '4RW8ppcPK6o', caption: 'Gameplay demo', isPrimary: true },
           { type: 'image', src: '/projects/persona3dual/hw.jpeg', caption: 'Running on real NDS hardware', isPrimary: false },

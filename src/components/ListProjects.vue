@@ -95,7 +95,11 @@ function ytEmbedUrl(src: string) {
   return `https://www.youtube.com/embed/${id}?autoplay=1&mute=0&rel=0`
 }
 
-onMounted(() => window.addEventListener('keydown', onKeydown))
+const isMounted = ref(false)
+onMounted(() => {
+  isMounted.value = true
+  window.addEventListener('keydown', onKeydown)
+})
 onUnmounted(() => window.removeEventListener('keydown', onKeydown))
 
 // Reset thumb when project changes
@@ -114,15 +118,11 @@ watch(activeProject, () => {
     </template>
 
     <li
-      v-for="project in list"
-      :key="project.text"
-      w-full flex items-center rd-2
-      class="relative group cursor-pointer"
+      v-for="project in list" :key="project.text" w-full flex items-center rd-2 class="relative group cursor-pointer"
       @click="openModal(project)"
     >
       <div
-        flex items-center
-        class="relative w-full rounded-lg border border-transparent
+        flex items-center class="relative w-full rounded-lg border border-transparent
                transition-all duration-200
                hover:border-gray-200 dark:hover:border-gray-700
                hover:shadow-md dark:hover:shadow-gray-900/40
@@ -131,9 +131,7 @@ watch(activeProject, () => {
         <div class="rounded w-full">
           <!-- Preview image -->
           <img
-            :src="project.image"
-            :alt="project.text"
-            class="w-full rounded-t-lg object-cover"
+            :src="project.image" :alt="project.text" class="w-full rounded-t-lg object-cover"
             style="max-height:180px; object-position:top;"
           >
 
@@ -173,28 +171,15 @@ watch(activeProject, () => {
   </ul>
 
   <!--  Modal  -->
-  <Teleport to="body">
+  <Teleport to="body" :disabled="!isMounted">
     <Transition name="modal-fade">
       <div
-        v-if="activeProject"
-        class="modal-overlay"
-        :class="{ 'modal-visible': isVisible }"
-        role="dialog"
-        aria-modal="true"
-        :aria-label="activeProject.text"
-        @click="onOverlayClick"
+        v-if="activeProject" class="modal-overlay" :class="{ 'modal-visible': isVisible }" role="dialog"
+        aria-modal="true" :aria-label="activeProject.text" @click="onOverlayClick"
       >
-        <div
-          ref="modalEl"
-          class="modal-panel"
-          :class="{ 'modal-panel-visible': isVisible }"
-        >
+        <div ref="modalEl" class="modal-panel" :class="{ 'modal-panel-visible': isVisible }">
           <!-- Close button -->
-          <button
-            class="modal-close"
-            aria-label="Close"
-            @click="closeModal"
-          >
+          <button class="modal-close" aria-label="Close" @click="closeModal">
             <i class="i-carbon-close text-xl" />
           </button>
 
@@ -204,32 +189,22 @@ watch(activeProject, () => {
             <div class="modal-hero">
               <template v-if="allMedia[activeMediaIndex]?.type === 'youtube'">
                 <iframe
-                  :src="ytEmbedUrl(allMedia[activeMediaIndex].src)"
-                  class="modal-hero-media"
-                  style="width: 100%; aspect-ratio: 16/9; background: #fff;"
-                  frameborder="0"
-                  allowfullscreen
+                  :src="ytEmbedUrl(allMedia[activeMediaIndex].src)" class="modal-hero-media"
+                  style="width: 100%; aspect-ratio: 16/9; background: #fff;" frameborder="0" allowfullscreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 />
               </template>
               <template v-else-if="allMedia[activeMediaIndex]?.type === 'video'">
                 <video
-                  :src="allMedia[activeMediaIndex].src"
-                  class="modal-hero-media"
-                  style="width: 100%; aspect-ratio: 16/9; background: #fff;"
-                  controls
-                  playsinline
+                  :src="allMedia[activeMediaIndex].src" class="modal-hero-media"
+                  style="width: 100%; aspect-ratio: 16/9; background: #fff;" controls playsinline
                 />
               </template>
               <template v-else-if="allMedia[activeMediaIndex]?.type === 'iframe'">
                 <iframe
-                  :src="allMedia[activeMediaIndex].src"
-                  class="modal-hero-media"
-                  style="width: 100%; aspect-ratio: 16/9; background: #fff;"
-                  frameborder="0"
-                  allowfullscreen="true"
-                  mozallowfullscreen="true"
-                  webkitallowfullscreen="true"
+                  :src="allMedia[activeMediaIndex].src" class="modal-hero-media"
+                  style="width: 100%; aspect-ratio: 16/9; background: #fff;" frameborder="0" allowfullscreen="true"
+                  mozallowfullscreen="true" webkitallowfullscreen="true"
                 />
               </template>
               <template v-else>
@@ -259,17 +234,13 @@ watch(activeProject, () => {
             <!--  Thumbnail strip  -->
             <div v-if="allMedia.length > 1" class="modal-thumbs">
               <button
-                v-for="(m, idx) in allMedia"
-                :key="idx"
-                class="modal-thumb"
-                :class="{ 'modal-thumb-active': idx === activeMediaIndex }"
-                @click.stop="activeMediaIndex = idx"
+                v-for="(m, idx) in allMedia" :key="idx" class="modal-thumb"
+                :class="{ 'modal-thumb-active': idx === activeMediaIndex }" @click.stop="activeMediaIndex = idx"
               >
                 <template v-if="m.type === 'youtube'">
                   <img
                     :src="`https://img.youtube.com/vi/${m.src.startsWith('http') ? new URL(m.src).searchParams.get('v') ?? m.src.split('/').pop() : m.src}/mqdefault.jpg`"
-                    alt=""
-                    class="w-full h-full object-cover"
+                    alt="" class="w-full h-full object-cover"
                   >
                   <span class="thumb-play-icon"><i class="i-carbon-play-filled-alt" /></span>
                 </template>
@@ -294,10 +265,7 @@ watch(activeProject, () => {
               <!-- Header row -->
               <div class="modal-info-header">
                 <div class="flex items-start gap-3 min-w-0">
-                  <i
-                    text-4xl inline-block shrink-0
-                    :class="activeProject.icon || 'i-carbon-unknown'"
-                  />
+                  <i text-4xl inline-block shrink-0 :class="activeProject.icon || 'i-carbon-unknown'" />
                   <div class="min-w-0">
                     <h2 class="modal-title">
                       {{ activeProject.text }}
@@ -309,25 +277,14 @@ watch(activeProject, () => {
                 </div>
 
                 <!-- Main CTA link -->
-                <a
-                  :href="activeProject.href"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="modal-cta"
-                  @click.stop
-                >
+                <a :href="activeProject.href" target="_blank" rel="noopener noreferrer" class="modal-cta" @click.stop>
                   {{ activeProject.hrefLabel ?? 'Visit →' }}
                 </a>
               </div>
 
               <!-- Skills -->
               <div v-if="activeProject.skills?.length" class="modal-skills">
-                <i
-                  v-for="skill in activeProject.skills"
-                  :key="skill"
-                  text-3xl
-                  :class="skill || 'i-carbon-unknown'"
-                />
+                <i v-for="skill in activeProject.skills" :key="skill" text-3xl :class="skill || 'i-carbon-unknown'" />
               </div>
 
               <!-- Description -->
@@ -343,13 +300,8 @@ watch(activeProject, () => {
               <!-- Extra links -->
               <div v-if="activeProject.links?.length" class="modal-links">
                 <a
-                  v-for="link in activeProject.links"
-                  :key="link.href"
-                  :href="link.href"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="modal-link-pill"
-                  @click.stop
+                  v-for="link in activeProject.links" :key="link.href" :href="link.href" target="_blank"
+                  rel="noopener noreferrer" class="modal-link-pill" @click.stop
                 >
                   {{ link.label }}
                 </a>
@@ -378,6 +330,7 @@ watch(activeProject, () => {
     background 0.28s ease,
     backdrop-filter 0.28s ease;
 }
+
 .modal-overlay.modal-visible {
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(4px);
@@ -408,6 +361,7 @@ watch(activeProject, () => {
     transform 0.28s cubic-bezier(0.34, 1.46, 0.64, 1),
     opacity 0.22s ease;
 }
+
 .modal-panel.modal-panel-visible {
   transform: translateY(0) scale(1);
   opacity: 1;
@@ -442,14 +396,17 @@ watch(activeProject, () => {
     background 0.15s,
     transform 0.15s;
 }
+
 .modal-close:hover {
   background: rgba(255, 255, 255, 1);
   transform: scale(1.08);
 }
+
 :global(.dark) .modal-close {
   background: rgba(40, 40, 40, 0.85);
   color: #ddd;
 }
+
 :global(.dark) .modal-close:hover {
   background: rgba(60, 60, 60, 1);
 }
@@ -468,15 +425,18 @@ watch(activeProject, () => {
   background: #f0f0f0;
   overflow: hidden;
 }
+
 :global(.dark) .modal-hero {
   background: #1a1a1a;
 }
+
 .modal-hero-media {
   width: 100%;
   max-height: 360px;
   object-fit: contain;
   display: block;
 }
+
 .modal-hero-caption {
   text-align: center;
   font-size: 0.75rem;
@@ -505,17 +465,21 @@ watch(activeProject, () => {
     background 0.15s,
     transform 0.15s;
 }
+
 .modal-arrow:hover {
   background: rgba(255, 255, 255, 1);
   transform: translateY(-50%) scale(1.1);
 }
+
 :global(.dark) .modal-arrow {
   background: rgba(30, 30, 30, 0.8);
   color: #eee;
 }
+
 .modal-arrow-left {
   left: 10px;
 }
+
 .modal-arrow-right {
   right: 10px;
 }
@@ -530,10 +494,12 @@ watch(activeProject, () => {
   background: #f8f8f8;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
+
 :global(.dark) .modal-thumbs {
   background: #1e1e1e;
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
+
 .modal-thumb {
   position: relative;
   flex-shrink: 0;
@@ -548,18 +514,23 @@ watch(activeProject, () => {
     border-color 0.15s,
     transform 0.15s;
 }
+
 .modal-thumb:hover {
   transform: scale(1.05);
 }
+
 .modal-thumb-active {
   border-color: #888;
 }
+
 :global(.dark) .modal-thumb {
   background: #2a2a2a;
 }
+
 :global(.dark) .modal-thumb-active {
   border-color: #aaa;
 }
+
 .thumb-play-icon,
 .thumb-video-placeholder {
   position: absolute;
@@ -576,6 +547,7 @@ watch(activeProject, () => {
 .modal-info {
   padding: 20px 20px 28px;
 }
+
 .modal-info-header {
   display: flex;
   align-items: flex-start;
@@ -583,11 +555,13 @@ watch(activeProject, () => {
   gap: 12px;
   flex-wrap: wrap;
 }
+
 .modal-title {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.25;
 }
+
 .modal-duration {
   font-size: 0.8rem;
   opacity: 0.5;
@@ -611,6 +585,7 @@ watch(activeProject, () => {
     transform 0.15s;
   white-space: nowrap;
 }
+
 .modal-cta:hover {
   opacity: 1;
   transform: translateY(-1px);
@@ -639,6 +614,7 @@ watch(activeProject, () => {
   gap: 8px;
   margin-top: 16px;
 }
+
 .modal-link-pill {
   display: inline-flex;
   align-items: center;
@@ -649,12 +625,15 @@ watch(activeProject, () => {
   background: rgba(0, 0, 0, 0.06);
   transition: background 0.15s;
 }
+
 .modal-link-pill:hover {
   background: rgba(0, 0, 0, 0.12);
 }
+
 :global(.dark) .modal-link-pill {
   background: rgba(255, 255, 255, 0.08);
 }
+
 :global(.dark) .modal-link-pill:hover {
   background: rgba(255, 255, 255, 0.14);
 }
@@ -664,6 +643,7 @@ watch(activeProject, () => {
 .modal-fade-leave-active {
   transition: opacity 0.22s ease;
 }
+
 .modal-fade-enter-from,
 .modal-fade-leave-to {
   opacity: 0;
