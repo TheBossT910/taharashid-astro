@@ -77,7 +77,7 @@ export const experienceData: ExperienceData = [
           { label: 'GitHub', href: 'https://github.com/TheBossT910/persona-3-dual' },
         ],
         media: [
-          { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'Gameplay demo', isPrimary: false },
+          { type: 'youtube', src: '4RW8ppcPK6o', caption: 'Gameplay demo', isPrimary: true },
           { type: 'image', src: '/projects/persona3dual/hw.jpeg', caption: 'Running on real NDS hardware', isPrimary: false },
           { type: 'image', src: '/projects/persona3dual/level.jpeg', caption: 'Example level', isPrimary: false },
           { type: 'image', src: '/projects/persona3dual/menu.jpeg', caption: 'Menu', isPrimary: false },
@@ -91,7 +91,7 @@ export const experienceData: ExperienceData = [
         skills: ['i-devicon-vuejs', 'i-devicon-dot-net-wordmark', 'i-devicon-microsoftsqlserver-wordmark', 'i-devicon-figma', 'i-devicon-tailwindcss', 'i-devicon-typescript'],
         image: '/projects/savepoint/main.png',
         href: 'https://www.savepoint.ca/',
-        hrefLabel: 'SavePoint.ca →',
+        hrefLabel: 'Live Site →',
         longDescription: `A web-first platform built to modernize how people and businesses collect and manage video games.\n\nI built SavePoint using Nuxt 3, ASP.NET Core, and MS SQL to bridge the gap between game collectors and local retro stores. For gamers, it’s a hub for barcode scanning, collection tracking, and real-time market valuations.\n\nFor stores stuck using spreadsheets, it was intended to be a modern inventory system that pulls data from IGDB and syncs directly to external marketplaces like eBay and Shopify.\n\nNote that only the consumer side was built and the store side was not.`,
         links: [
           { label: 'Frontend', href: 'https://github.com/TheBossT910/savepoint-web' },
@@ -99,8 +99,8 @@ export const experienceData: ExperienceData = [
           { label: 'Figma', href: 'https://www.figma.com/design/W2BOFipWLVwZbBskBtIcsh/SavePoint-Web--June-2025-?node-id=18-1951&t=cD7cN1p2i11uqFVa-1' },
         ],
         media: [
-          { type: 'iframe', src: 'https://www.savepoint.ca/', caption: '', isPrimary: true },
-          { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'Website demo', isPrimary: false },
+          { type: 'iframe', src: 'https://www.savepoint.ca/', caption: 'Website walkthrough', isPrimary: true },
+          { type: 'youtube', src: 'gtQ_mBYTsQg', caption: 'Website demo', isPrimary: false },
           { type: 'image', src: '/projects/savepoint/account.png', caption: 'User account page', isPrimary: false },
           { type: 'image', src: '/projects/savepoint/detail.png', caption: 'Game detail page', isPrimary: false },
           { type: 'image', src: '/projects/savepoint/featured.png', caption: 'Featured games highlight', isPrimary: false },
@@ -125,7 +125,7 @@ export const experienceData: ExperienceData = [
           { label: 'Figma', href: 'https://www.figma.com/design/qMhX9zJUcBe4BkF2iaLHUK/AnimeTracker--Feb-2025-?node-id=0-1&t=T4QJsan2NUW9nelo-1' },
         ],
         media: [
-          { type: 'youtube', src: 'QIIPXA2A6cM', caption: 'App demo', isPrimary: false },
+          { type: 'youtube', src: 'LNweyZEIKg8', caption: 'App walkthrough', isPrimary: true },
           { type: 'image', src: '/projects/koyomi/macos/list.png', caption: 'List (MacOS)', isPrimary: false },
           { type: 'image', src: '/projects/koyomi/macos/list_with_fav.png', caption: 'List with Favourites (MacOS)', isPrimary: false },
           { type: 'image', src: '/projects/koyomi/macos/schedule_1.png', caption: 'Schedule (MacOS)', isPrimary: false },
@@ -196,7 +196,7 @@ export const experienceData: ExperienceData = [
         hrefLabel: 'Live Site →',
         longDescription: `The Capella System is a modular assistive device engineered to help individuals with limited dexterity open caps and jars. It features an ergonomic grip and a magnetic sliding T-Handle to shift the workload from weak finger joints to the forearm.\n\nWe designed swappable magnetic cones to fit different sized items, keeping the final tool at just 57 grams and fully drop-proof. I led client meetings and built the project's website, helping us win 1st place in the Accessibility category at uOttawa's Design Day!`,
         links: [
-          { label: 'Website', href: 'https://enableworks.framer.website/' },
+          { label: 'MakerRepo', href: 'https://makerepo.com/amelie789/2561.enableworks' },
         ],
         media: [
           { type: 'iframe', src: 'https://enableworks.framer.website/', caption: '', isPrimary: true },

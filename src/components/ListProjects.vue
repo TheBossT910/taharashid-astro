@@ -92,7 +92,7 @@ function nextMedia() {
 // YouTube embed helper
 function ytEmbedUrl(src: string) {
   const id = src.startsWith('http') ? new URL(src).searchParams.get('v') ?? src.split('/').pop() : src
-  return `https://www.youtube.com/embed/${id}?autoplay=0&rel=0`
+  return `https://www.youtube.com/embed/${id}?autoplay=1&mute=0&rel=0`
 }
 
 onMounted(() => window.addEventListener('keydown', onKeydown))
