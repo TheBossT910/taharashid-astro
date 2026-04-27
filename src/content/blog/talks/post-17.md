@@ -18,9 +18,7 @@ I first envisioned SavePoint as a personal tool to **track my own games**. But a
 
 For collectors, SavePoint makes it effortless to scan, catalog, and value physical or digital games. For stores, it’s a way to **modernize operations**, sync with online marketplaces, and reach more customers.
 
-<video width="100%" controls>
-  <source src="https://dl.dropboxusercontent.com/scl/fi/lpxlayurn6tawd3ops782/walkthrough-lowres.mp4?rlkey=0m9zua9z0kqm6daymawhwemiw&st=5awpb4pu&dl=0" type="video/mp4">
-</video>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/gtQ_mBYTsQg?autoplay=1&mute=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Right now, I’ve just completed **Phase 1 out of 4** which implements some basic but core features including:
 - 📜 Browsing all 1,500+ games available in our database

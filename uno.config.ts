@@ -48,6 +48,7 @@ export default defineConfig({
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: [
     'i-ri-file-list-2-line',
+    'i-ri-hand-heart-fill',
     'i-simple-icons-github',
     'i-simple-icons-linkedin',
     'i-simple-icons-instagram',

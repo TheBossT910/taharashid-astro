@@ -18,17 +18,13 @@ When clicking on a specific game, you will be rerouted to the **details page**. 
 
 My latest page is the **‘Games’ page**, which showcases *all games*. It’s quite a simple page, but I really like the top of the webpage, where you can see different games scrolling across the screen. After scrolling past the top, it simply shows all games in a card format.
 
-<video width="100%" controls>
-  <source src="https://dl.dropboxusercontent.com/scl/fi/9i9y3btyvm24xi2jmkf2z/general-overview.mp4?rlkey=hz92l8bf4d6h3bre7aubiqi81&st=bnddv1mg&dl=0" type="video/mp4">
-</video>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/nVg5vzcXzvE?autoplay=1&mute=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 I do plan to add more webpages, including a **lists webpage**. Did you know that Lists and Stacks are meant to be *the same thing*? **Stacks** are an easy, visual way to represent and access lists, while **Lists** are what will pop up after a user clicks on a Stack. A List is meant to **quickly display a lot of information** about a game in a small space, which is perfect for when there could be 10+ games in one stack!
 
 I’m both quite **amazed and proud** that I was able to design and especially implement **all** my Figma designs into code. And I made the *whole site responsive*, so it works both on **desktop and mobile devices**! For now, the frontend is using dummy data and has just the design implemented (i.e. you can’t click on a product to see its details just yet) but I **plan to connect everything together** once I finish the basic backend.
 
-<video width="100%" controls>
-  <source src="https://dl.dropboxusercontent.com/scl/fi/27uri7kgqm1med29y62r2/responsive-overview.mp4?rlkey=b0t9ca9hdi20fzfciclhv3p90&st=8oawh3ov&dl=0" type="video/mp4">
-</video>
+<iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/pTKUgzD9cIo?autoplay=1&mute=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Speaking of the backend, I completely *threw out my pre-existing ExpressJS + Supabase backend*. After I started analyzing it once again, I realized that it was *sloppy, confusing code*, and that I hadn’t even created a way to access games from my Supabase DB easily! So instead of completely rearchitecting that code, I **created a new backend** in something I became recently acquainted with from my internship: **ASP.NET Core** + **SQL**. I kind of locked in and got the backend finished within a span of a few days.
 Now, I have a backend *ready to be used*, and a frontend *waiting to be connected to*.
