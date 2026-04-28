@@ -55,6 +55,11 @@ function openModal(project: Project) {
     isVisible.value = true
   })
   document.body.style.overflow = 'hidden'
+  ;(window as any).posthog?.capture('project_modal_opened', { project_name: project.text })
+}
+
+function trackProjectLinkClick(project: Project) {
+  ;(window as any).posthog?.capture('project_link_clicked', { project_name: project.text, href: project.href })
 }
 
 function closeModal() {
@@ -277,7 +282,7 @@ watch(activeProject, () => {
                 </div>
 
                 <!-- Main CTA link -->
-                <a :href="activeProject.href" target="_blank" rel="noopener noreferrer" class="modal-cta" @click.stop>
+                <a :href="activeProject.href" target="_blank" rel="noopener noreferrer" class="modal-cta" @click.stop="trackProjectLinkClick(activeProject)">
                   {{ activeProject.hrefLabel ?? 'Visit →' }}
                 </a>
               </div>

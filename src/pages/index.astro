@@ -96,7 +96,13 @@ const posts = await getPosts(path)
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
         siteConfig.socialLinks.map((link) => (
-          <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
+          <a
+            aria-label={link.text}
+            href={link.href}
+            target="_blank"
+            class="prose-link js-social-link"
+            data-social-name={link.text}
+          >
             <i class:list={[link.icon]} />
             {link.text}
           </a>
@@ -105,9 +111,33 @@ const posts = await getPosts(path)
     </p>
     <p>
       Want to get in touch? Email me at
-      <a prose-link aria-label={siteConfig.email} href={`mailto:${siteConfig.email}`}>
+      <a prose-link aria-label={siteConfig.email} href={`mailto:${siteConfig.email}`} id="contact-email-link">
         {siteConfig.email}
       </a>.
     </p>
   </div>
 </BaseLayout>
+
+<script is:inline>
+  function setupHomePageTracking() {
+    document.querySelectorAll('.js-social-link').forEach((el) => {
+      el.removeEventListener('click', el._phSocialHandler)
+      el._phSocialHandler = function () {
+        window.posthog?.capture('social_link_clicked', { platform: el.dataset.socialName })
+      }
+      el.addEventListener('click', el._phSocialHandler)
+    })
+
+    const emailLink = document.getElementById('contact-email-link')
+    if (emailLink) {
+      emailLink.removeEventListener('click', emailLink._phEmailHandler)
+      emailLink._phEmailHandler = function () {
+        window.posthog?.capture('contact_email_clicked')
+      }
+      emailLink.addEventListener('click', emailLink._phEmailHandler)
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', setupHomePageTracking)
+  document.addEventListener('astro:page-load', setupHomePageTracking)
+</script>

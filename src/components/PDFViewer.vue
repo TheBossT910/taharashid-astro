@@ -9,10 +9,12 @@ const props = defineProps<{
 
 const pdfRef = ref(null)
 function downloadPdf() {
+  ;(window as any).posthog?.capture('resume_downloaded', { pdf_name: props.pdfName })
   pdfRef.value?.download(props.pdfName)
 }
 
 function printPdf() {
+  ;(window as any).posthog?.capture('resume_printed', { pdf_name: props.pdfName })
   // pdfRef.value?.download('MyDocument.pdf')
   pdfRef.value?.print(300, props.pdfName, true)
 }

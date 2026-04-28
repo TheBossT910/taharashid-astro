@@ -38,6 +38,14 @@ function getYear(date: Date | string | number) {
   return new Date(date).getFullYear()
 }
 
+function trackPostClick(post: Post) {
+  ;(window as any).posthog?.capture('blog_post_clicked', {
+    post_title: post.data.title,
+    post_slug: post.slug,
+    is_redirect: !!post.data.redirect,
+  })
+}
+
 // checks if a post should be displayed if it is scheduled in the future
 function showPost(postDateString: string) {
   const currentDate = new Date()
@@ -64,7 +72,7 @@ function showPost(postDateString: string) {
           {{ getYear(post.data.date) }}
         </span>
       </div>
-      <a v-show="showPost(post.data.date)" text-lg lh-tight nav-link flex="~ col gap-2" :aria-label="post.data.title" :target="getTarget(post)" :href="getHref(post)">
+      <a v-show="showPost(post.data.date)" text-lg lh-tight nav-link flex="~ col gap-2" :aria-label="post.data.title" :target="getTarget(post)" :href="getHref(post)" @click="trackPostClick(post)">
         <div flex="~ col md:row gap-2 md:items-center">
           <div flex="~ gap-2 items-center text-wrap">
             <span lh-normal>
