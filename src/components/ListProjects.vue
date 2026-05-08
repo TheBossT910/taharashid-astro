@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import { useDark } from '@vueuse/core'
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+
+defineProps<{ list: Project[] }>()
+
+const isDark = useDark()
 
 interface ProjectMedia {
   type: 'image' | 'video' | 'youtube' | 'iframe'
@@ -26,8 +31,6 @@ interface Project {
   links?: ProjectLink[]
   media?: ProjectMedia[]
 }
-
-defineProps<{ list: Project[] }>()
 
 //  Modal state
 const activeProject = ref<Project | null>(null)
@@ -128,6 +131,7 @@ watch(activeProject, () => {
     >
       <div
         flex items-center class="relative w-full rounded-lg border border-transparent
+               bg-white dark:bg-hex-161b22
                transition-all duration-200
                hover:border-gray-200 dark:hover:border-gray-700
                hover:shadow-md dark:hover:shadow-gray-900/40
@@ -179,7 +183,7 @@ watch(activeProject, () => {
   <Teleport to="body" :disabled="!isMounted">
     <Transition name="modal-fade">
       <div
-        v-if="activeProject" class="modal-overlay" :class="{ 'modal-visible': isVisible }" role="dialog"
+        v-if="activeProject" class="modal-overlay" :class="{ 'modal-visible': isVisible, 'is-dark': isDark }" role="dialog"
         aria-modal="true" :aria-label="activeProject.text" @click="onOverlayClick"
       >
         <div ref="modalEl" class="modal-panel" :class="{ 'modal-panel-visible': isVisible }">
@@ -342,7 +346,7 @@ watch(activeProject, () => {
 }
 
 /* Dark mode overlay */
-:global(.dark) .modal-overlay.modal-visible {
+.is-dark.modal-overlay.modal-visible {
   background: rgba(0, 0, 0, 0.75);
 }
 
@@ -372,8 +376,9 @@ watch(activeProject, () => {
   opacity: 1;
 }
 
-:global(.dark) .modal-panel {
+.is-dark .modal-panel {
   background: #141414;
+  color: #bbbbbb;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.06),
     0 4px 6px rgba(0, 0, 0, 0.2),
@@ -407,12 +412,12 @@ watch(activeProject, () => {
   transform: scale(1.08);
 }
 
-:global(.dark) .modal-close {
+.is-dark .modal-close {
   background: rgba(40, 40, 40, 0.85);
   color: #ddd;
 }
 
-:global(.dark) .modal-close:hover {
+.is-dark .modal-close:hover {
   background: rgba(60, 60, 60, 1);
 }
 
@@ -431,7 +436,7 @@ watch(activeProject, () => {
   overflow: hidden;
 }
 
-:global(.dark) .modal-hero {
+.is-dark .modal-hero {
   background: #1a1a1a;
 }
 
@@ -476,7 +481,7 @@ watch(activeProject, () => {
   transform: translateY(-50%) scale(1.1);
 }
 
-:global(.dark) .modal-arrow {
+.is-dark .modal-arrow {
   background: rgba(30, 30, 30, 0.8);
   color: #eee;
 }
@@ -500,7 +505,7 @@ watch(activeProject, () => {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-:global(.dark) .modal-thumbs {
+.is-dark .modal-thumbs {
   background: #1e1e1e;
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
@@ -528,11 +533,11 @@ watch(activeProject, () => {
   border-color: #888;
 }
 
-:global(.dark) .modal-thumb {
+.is-dark .modal-thumb {
   background: #2a2a2a;
 }
 
-:global(.dark) .modal-thumb-active {
+.is-dark .modal-thumb-active {
   border-color: #aaa;
 }
 
@@ -635,11 +640,11 @@ watch(activeProject, () => {
   background: rgba(0, 0, 0, 0.12);
 }
 
-:global(.dark) .modal-link-pill {
+.is-dark .modal-link-pill {
   background: rgba(255, 255, 255, 0.08);
 }
 
-:global(.dark) .modal-link-pill:hover {
+.is-dark .modal-link-pill:hover {
   background: rgba(255, 255, 255, 0.14);
 }
 
