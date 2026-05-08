@@ -30,5 +30,5 @@ My personal portfolio and blog. The site covers work experience, personal projec
 
 ## License
 
-Content is licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).  
+Content is licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 Original code was based on the [Vitesse Astro](https://github.com/kieranwv/vitesse-astro) template by Kieran Wang, MIT licensed.
