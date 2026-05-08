@@ -32,5 +32,5 @@ My personal portfolio and blog. The site covers work experience, personal projec
 
 This project is based on the Vitesse Astro Template by Kieran Wang, and heavily modified by me (Taha Rashid)
 
-[MIT License](./LICENSE) © 2026 [Taha Rashid](https://github.com/TheBossT910)
-[MIT License](./LICENSE) © 2024 [Kieran Wang](https://github.com/kieranwv/) (Original template)
+- [MIT License](./LICENSE) © 2026 [Taha Rashid](https://github.com/TheBossT910)
+- [MIT License](./LICENSE) © 2024 [Kieran Wang](https://github.com/kieranwv/) (Original template)
